@@ -89,20 +89,21 @@ class GoSync extends StatelessWidget {
         '/linuxInstall': (BuildContext context) => const GoSyncLinuxInstall(),
         '/uninstall': (BuildContext context) => const GoSyncUninstall(),
       },
-      // localizationsDelegates: [
-      //   AppLocalizations.delegate,
-      //   GlobalMaterialLocalizations.delegate,
-      //   GlobalWidgetsLocalizations.delegate,
-      //   GlobalCupertinoLocalizations.delegate,
-      // ],
-      // supportedLocales: [
-      //   Locale('en'), // English
-      //   Locale('fr'), // Francais
-      //   Locale('de'), // Deutsch
-      //   // Locale('ga'), // Gaeilge
-      // ],
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('fr'), // Francais
+        Locale('de'), // Deutsch
+        // Locale('ga'), // Gaeilge
+      ],
+
+      // localizationsDelegates: AppLocalizations.localizationsDelegates,
+      // supportedLocales: AppLocalizations.supportedLocales,
       // home: const GoSyncHomePage(title: goSyncTitle),
       home: DefaultTabController(
         length: 3,
