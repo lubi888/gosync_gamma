@@ -1,0 +1,182 @@
+{
+  "titledate": "goSync_beta250226",
+  "@titledate": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "title": "goSync",
+  "@title": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "helloWorld": "hello flutter eng",
+  "@helloWorld": {
+    "description": "hello in each language"
+  },
+  "home": "home",
+  "@home": {
+    "description": "hello in each language"
+  },
+  "golangInstall": "go install",
+  "@golangInstall": {
+    "description": "golang install in respective languages"
+  },
+  "goSyncHeading": "Golang Install on desktop for Windows, Apple, Linux",
+  "@goSyncHeading": {
+    "description": "headliners"
+  },
+  "danger": "danger AI",
+  "@danger": {
+    "description": "danger"
+  },
+  "visitGoPlayground": "visit Go playground",
+  "@visitGoPlayground": {
+    "description": "url link to the Go playground"
+  },
+  "visitGoDevPlay": "visit Go playground",
+  "@visitGoDevPlay": {
+    "description": "url link to the Go playground"
+  },
+  "drawerHeader": "\n\n\n\ngo architecture designers",
+  "@drawerHeader": {
+    "description": "empty string"
+  },
+  "drawerHeader2": "\n\n\n\ngolang home go.dev",
+  "@drawerHeader2": {
+    "description": "goland home go.dev"
+  },
+  "drawerHeader3": "\n\n\n\ngolang gopher",
+  "@drawerHeader3": {
+    "description": "goland home go.dev"
+  },
+  "drawerHeader4": "\n\n\n\ngolang terminal",
+  "@drawerHeader4": {
+    "description": "goland home go.dev"
+  },
+  "ethCheckGoHelp": "Now let us check that our installation of golang is working.\nOpen up a terminal (linux & mac) or a command prompt (windows) and type in the following code:\ngo version\nThis is your go version and it should be 1.12-1.13 as these are the latest versions\nType in the following code:\ngo help\nThis is a list of all available commands.",
+  "@ethCheckGoHelp": {
+    "description": "check go environment"
+  },
+  "golangInstallInstructions": "Visit https://golang.org/doc/install and browse for assistance with ways to install golang on different system architectures.\nFor windows use the recommended .msi installer and it is fine to put the goland files deep within the windows system. C:\\Go is preferable when wanting to program.",
+  "@golangInstallInstructions": {
+    "description": "check go environment"
+  },
+  "golangInstallInstructions2": "\nexport PATH=$PATH:/usr/local/go/bin\n",
+  "@golangInstallInstructions2": {
+    "description": "check go environment 2"
+  },
+  "gosyncWindowsInstallInstructions": "1, Open the MSI file you downloaded and follow the prompts to install Go. \n\nBy default, the installer will install Go to Program Files or Program Files (x86). You can change the location as needed. After installing, you will need to close and reopen any open command prompts so that changes to the environment made by the installer are reflected at the command prompt.",
+  "@gosyncWindowsInstallInstructions": {
+    "description": "windows install instructions 1"
+  },
+  "gosyncWindowsInstallInstructions2": "2, Verify that you've installed Go.\nIn Windows, click the Start menu.\nIn the menu's search box, type cmd, then press the Enter key.\nIn the Command Prompt window that appears, type the following command:\n\t\t$ go version\n\nConfirm that the command prints the installed version of Go.",
+  "@gosyncWindowsInstallInstructions2": {
+    "description": "windows install instructions 2"
+  },
+  "gosyncWindowsInstallInstructions3": "3, the output should give the go version number and the architecture type. Something like this: ",
+  "@gosyncWindowsInstallInstructions3": {
+    "description": "windows install instructions 3"
+  },
+  "gosyncWindowsInstallInstructions4": "go version go1.23.1 windows/amd64",
+  "@gosyncWindowsInstallInstructions4": {
+    "description": "windows install instructions 4"
+  },
+  "gosyncWindowsInstallInstructions5": "5, AS of November 2024 the current release of Go is 1.23. To find the most recent release check the main website https://go.dev/dl/",
+  "@gosyncWindowsInstallInstructions5": {
+    "description": "windows install instructions 5"
+  },
+  "gosyncHeaderWindowsPostInstall": "Windows Post Install and Setup validation",
+  "@gosyncHeaderWindowsPostInstall": {
+    "description": "windows post install"
+  },
+  "gosyncHeaderLinuxPostInstall": "Linux Post Install and Setup validation",
+  "@gosyncHeaderLinuxPostInstall": {
+    "description": "windows post install"
+  },
+  "gosyncHeaderMultiInstall": "Multiple Golang Installations",
+  "@gosyncHeaderMultiInstall": {
+    "description": "windows post install"
+  },
+  "gosyncHeaderWindowsPostInstallCheck": "The GOPATH is set as C:/Users/adam/go but this folder is not created yet. Let''s do that now. \nWe actually need to create 3 folders /go/pkg/mod in /Users/adam ",
+  "@gosyncHeaderWindowsPostInstallCheck": {
+    "description": "windows post install check"
+  },
+  "gosyncGopathPurpose": "The GOPATH is a folder with elevated user rights to write and run go programmes. \nThe system no knows to allow go applications to run from here. \nModules are also stored here.",
+  "@gosyncGopathPurpose": {
+    "description": "windows post install check go env"
+  },
+  "gosyncGorootPurpose": "The GOROOT is a folder is where the go.exe||go.bin executable program file is located. This is where Go lives as go.ext or go.bin. \nThe system no knows to allow go applications to run from here. \nInside this folder are go and gofmt go format.",
+  "@gosyncGorootPurpose": {
+    "description": "windows post install check go env"
+  },
+  "gosyncWinMakeFolders": "To create 3 folders /go/pkg/mod in /Users/adam open up a terminal and change to your home directory. \nType in 'mkdir /go/pkg/mod' or create these folders visually using File Explorer.",
+  "@gosyncWinMakeFolders": {
+    "description": "windows make files"
+  },
+  "gosyncOnlineTutorial": "Now change directly to the 'go' directory. Make a folder called 'hello' and follow the opening steps online here https://go.dev/doc/tutorial/getting-started/ and you can also start here if you want to run a web server, etc. https://go.dev/learn/ ",
+  "@gosyncOnlineTutorial": {
+    "description": "windows make files follow tutorial"
+  },
+  "gosyncLinuxInstallInstructions": "1, Remove any previous Go installation by deleting the /usr/local/go folder (if it exists), then extract the archive you just downloaded into /usr/local, creating a fresh Go tree in /usr/local/go:",
+  "@gosyncLinuxInstallInstructions": {
+    "description": ".k install instructions 1"
+  },
+  "gosyncLinuxInstallInstructions2": "2, $ rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz",
+  "@gosyncLinuxInstallInstructions2": {
+    "description": "linux install instructions 2"
+  },
+  "gosyncLinuxInstallInstructions3": "3,(You may need to run the command as root or through sudo). \nDo not untar the archive into an existing /usr/local/go tree. This is known to produce broken Go installations. ",
+  "@gosyncLinuxInstallInstructions3": {
+    "description": "linux install instructions 3"
+  },
+  "gosyncLinuxInstallInstructions4": "4, Add /usr/local/go/bin to the PATH environment variable. \nYou can do this by adding the following line to your $HOME/.profile or /etc/profile (for a system-wide installation):",
+  "@gosyncLinuxInstallInstructions4": {
+    "description": "linux install instructions 4"
+  },
+  "gosyncLinuxInstallInstructions5": "5 export PATH=$PATH:/usr/local/go/bin",
+  "@gosyncLinuxInstallInstructions5": {
+    "description": "linux install instructions 5"
+  },
+  "gosyncLinuxInstallInstructions6": "6 Note: Changes made to a profile file may not apply until the next time you log into your computer. To apply the changes immediately, just run the shell commands directly or execute them from the profile using a command such as source $HOME/.profile.",
+  "@gosyncLinuxInstallInstructions6": {
+    "description": "linux install instructions 5"
+  },
+  "gosyncLinuxInstallInstructions7": "7 Verify that you''ve installed Go by opening a command prompt and typing the following command:\n  $ go version",
+  "@gosyncLinuxInstallInstructions7": {
+    "description": "linux install instructions 5"
+  },
+  "gosyncLinuxInstallInstructions8": "8 Confirm that the command prints the installed version of Go.",
+  "@gosyncLinuxInstallInstructions8": {
+    "description": "linux install instructions 5"
+  },
+  "gosyncLinuxInstallInstructionsReadout": "go version go1.23.2 linux/amd64",
+  "@gosyncLinuxInstallInstructionsReadout": {
+    "description": "linux install instructions readout"
+  },
+  "gosyncUninstallInstructions": "1, Linux / macOS / FreeBSD   \nDelete the go directory.  \nThis is usually /usr/local/go.",
+  "@gosyncUninstallInstructions": {
+    "description": "uninstall instructions 1"
+  },
+  "gosyncUninstallInstructions2": "2, Remove the Go bin directory from your PATH environment variable. \nUnder Linux and FreeBSD, edit /etc/profile or $HOME/.profile. If you installed Go with the macOS package, remove the /etc/paths.d/go file.",
+  "@gosyncUninstallInstructions2": {
+    "description": "uninstall instructions 2"
+  },
+  "gosyncUninstallInstructions3": "3,Windows \nThe simplest way to remove Go is via Add/Remove Programs in the Windows control panel: ",
+  "@gosyncUninstallInstructions3": {
+    "description": "uninstall instructions 3"
+  },
+  "gosyncUninstallInstructions4": "4, In Control Panel, double-click Add/Remove Programs. \nIn Add/Remove Programs, select Go Programming Language, click Uninstall, then follow the prompts.",
+  "@gosyncUninstallInstructions4": {
+    "description": "uninstall instructions 4"
+  },
+  "gosyncUninstallInstructions5": "5, For removing Go with tools, you can also use the command line: \nUninstall using the command line by running the following command:",
+  "@gosyncUninstallInstructions5": {
+    "description": "uninstall instructions 5"
+  },
+  "gosyncUninstallInstructions6": "6, msiexsi /q ",
+  "@gosyncUninstallInstructions6": {
+    "description": "uninstall instructions 6"
+  },
+  "gosyncUninstallInstructions7": "7, Note: Using this uninstall process for Windows will automatically remove Windows environment variables created by the original installation.",
+  "@gosyncUninstallInstructions7": {
+    "description": "uninstall instructions 7"
+  }
+}
