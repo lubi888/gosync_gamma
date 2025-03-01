@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 // for root bundle
 // import 'package:json_theme/json_theme.dart';
@@ -90,7 +90,7 @@ class GoSync extends StatelessWidget {
         '/uninstall': (BuildContext context) => const GoSyncUninstall(),
       },
       localizationsDelegates: [
-        AppLocalizations.delegate,
+        // AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
