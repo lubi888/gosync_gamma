@@ -19,8 +19,13 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
+<<<<<<< HEAD
   sdk: ^3.8.0-133.0.dev
   # sdk: 3.7.0
+=======
+  sdk: ^3.7.0
+
+>>>>>>> 1420e2f38960e495b15d9716796a359c67687e7c
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -42,7 +47,11 @@ dependencies:
   url_launcher: ^6.3.1
   flutter_linkify: ^6.0.0
   google_fonts: ^6.2.1
+<<<<<<< HEAD
   flutter_gen: ^5.10.0
+=======
+  flutter_gen: any
+>>>>>>> 1420e2f38960e495b15d9716796a359c67687e7c
   font_awesome_flutter: ^10.8.0
   share_plus: ^10.1.4
   # flutter_localizations:

@@ -89,6 +89,7 @@ class GoSync extends StatelessWidget {
         // '/linuxInstall': (BuildContext context) => const GoSyncLinuxInstall(),
         // '/uninstall': (BuildContext context) => const GoSyncUninstall(),
       },
+<<<<<<< HEAD
       // localizationsDelegates: [
       //   AppLocalizations.delegate,
       //   GlobalMaterialLocalizations.delegate,
@@ -101,6 +102,20 @@ class GoSync extends StatelessWidget {
       //   Locale('de'), // Deutsch
       //   // Locale('ga'), // Gaeilge
       // ],
+=======
+      localizationsDelegates: [
+        // AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'), // English
+        Locale('fr'), // Francais
+        Locale('de'), // Deutsch
+        // Locale('ga'), // Gaeilge
+      ],
+>>>>>>> 1420e2f38960e495b15d9716796a359c67687e7c
 
       // localizationsDelegates: AppLocalizations.localizationsDelegates,
       // supportedLocales: AppLocalizations.supportedLocales,
