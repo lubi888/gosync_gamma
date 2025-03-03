@@ -20,7 +20,7 @@ version: 1.0.0+1
 
 environment:
   sdk: ^3.8.0-133.0.dev
-
+  # sdk: 3.7.0
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
 # consider running `flutter pub upgrade --major-versions`. Alternatively,
@@ -33,13 +33,16 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  # intl: ^0.20.0-nullsafety.2
+
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   url_launcher: ^6.3.1
   flutter_linkify: ^6.0.0
   google_fonts: ^6.2.1
-  flutter_gen: ^5.9.0
+  flutter_gen: ^5.10.0
   font_awesome_flutter: ^10.8.0
   share_plus: ^10.1.4
   # flutter_localizations:

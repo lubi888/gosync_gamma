@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import './gosync_text.dart';
 // //   // appBar: AppBar(
 // //   // Here we take the value from the GoSyncHome object that was created by
 // //   // the App.build method, and use it to set our appbar title.
@@ -62,8 +62,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
         // elevation/: 30.0,
         title: Text(
           // goSyncTitle,
-          // "title is today",
-          AppLocalizations.of(context)!.title,
+          "title is today",
+          // AppLocalizations.of(context)!.title,
           textAlign: TextAlign.center,
           style: const TextStyle(
             // backgroundColor: Color.fromARGB(255, 207, 160, 17),
@@ -86,7 +86,9 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
                   alignment: Alignment.center,
                   child: Text(
                       // home
-                      AppLocalizations.of(context)!.golangInstall),
+                  "home1"
+                      // AppLocalizations.of(context)!.golangInstall
+                  ),
                 )),
             Tab(
                 icon: const Icon(
@@ -96,7 +98,10 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
                 height: 90.0,
                 child: Align(
                   alignment: Alignment.center,
-                  child: Text(AppLocalizations.of(context)!.title),
+                  child: Text(
+                  "home2"
+                      // AppLocalizations.of(context)!.title
+                  ),
                   // install golang and geth
                 )),
             Tab(
@@ -106,7 +111,10 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
               ),
               child: Align(
                 alignment: Alignment.center,
-                child: Text(AppLocalizations.of(context)!.danger),
+                child: Text(
+                "hom3"
+                    // AppLocalizations.of(context)!.danger
+                ),
               ),
             ),
           ],

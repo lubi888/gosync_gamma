@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 import './main.dart';
@@ -8,6 +8,7 @@ import './gosync_appbar.dart';
 import './gosync_scrollbar0.dart';
 import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
+import './gosync_text.dart';
 
 // import 'package:json_theme/json_theme.dart';
 // import 'package:gosync/gosync_text.dart';
@@ -70,7 +71,8 @@ class GoSyncNavDrawer extends StatelessWidget {
                   image: AssetImage(_kAsset1), fit: BoxFit.contain),
             ),
             child: Text(
-              AppLocalizations.of(context)!.drawerHeader,
+              "drawer header",
+              // AppLocalizations.of(context)!.drawerHeader,
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontWeight: FontWeight.bold,
@@ -852,7 +854,8 @@ class GoSyncNavDrawer extends StatelessWidget {
             ),
             child: Text(
               // drawerHeader 'go designers,
-              AppLocalizations.of(context)!.drawerHeader2,
+              "header drawer 2",
+              // AppLocalizations.of(context)!.drawerHeader2,
               // style: const TextStyle(color: Colors.purpleAccent),
               textAlign: TextAlign.center,
               // overflow: TextOverflow.visible,
@@ -906,7 +909,8 @@ class GoSyncNavDrawer extends StatelessWidget {
                     color: Colors.teal,
                   ),
                   title: Text(
-                    AppLocalizations.of(context)!.visitGoDevPlay,
+                    "visit google play",
+                    // AppLocalizations.of(context)!.visitGoDevPlay,
                     style: const TextStyle(color: Colors.yellow),
                   ),
                   subtitle: const Text(
@@ -1725,7 +1729,8 @@ class GoSyncNavDrawer extends StatelessWidget {
             // },
             child: Text(
               // drawerHeader 'go designers,
-              AppLocalizations.of(context)!.drawerHeader3,
+              "drawer head 3",
+              // AppLocalizations.of(context)!.drawerHeader3,
               // style: const TextStyle(color: Colors.purpleAccent),
               textAlign: TextAlign.center,
               // overflow: TextOverflow.visible,
@@ -2201,7 +2206,8 @@ class GoSyncNavDrawer extends StatelessWidget {
               ),
               child: Text(
                   // drawerHeader 'go designers,
-                  AppLocalizations.of(context)!.drawerHeader4,
+                  "drawer header 4",
+                  // AppLocalizations.of(context)!.drawerHeader4,
                   // style: const TextStyle(color: Colors.purpleAccent),
                   textAlign: TextAlign.center,
                   // overflow: TextOverflow.visible,
@@ -2227,7 +2233,8 @@ class GoSyncNavDrawer extends StatelessWidget {
             // },
             child: Text(
               // drawerHeader 'go designers,
-              AppLocalizations.of(context)!.drawerHeader4,
+              // AppLocalizations.of(context)!.drawerHeader4,
+              "drawer head 4",
               // style: const TextStyle(color: Colors.purpleAccent),
               textAlign: TextAlign.center,
               // overflow: TextOverflow.visible,

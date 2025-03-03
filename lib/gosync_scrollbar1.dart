@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import './gosync_text.dart';
 import './gosync_navdrawer.dart';
 // import 'package:intl/intl.dart';
@@ -139,7 +139,8 @@ class GoSyncScrollbar1 extends StatelessWidget {
               ),
               child: Text(
                 // goSyncHeading,
-                AppLocalizations.of(context)!.goSyncHeading,
+                "go sync heading",
+                // AppLocalizations.of(context)!.goSyncHeading,
                 overflow: TextOverflow.fade,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
@@ -242,7 +243,8 @@ class GoSyncScrollbar1 extends StatelessWidget {
               ),
               child: Text(
                 // ethInstallGolandHeading,
-                AppLocalizations.of(context)!.helloWorld,
+                "hello world",
+                // AppLocalizations.of(context)!.helloWorld,
                 // "Golang Install on Windows Apple Linux",
                 textAlign: TextAlign.center,
                 style: const TextStyle(
@@ -791,223 +793,223 @@ class GoSyncScrollbar1 extends StatelessWidget {
             // start instructions again here
             const Padding(padding: EdgeInsets.all(8.0)),
             //2nd header bar 'install golang'
-            Container(
-              padding: const EdgeInsets.all(15.0),
-              // width: 300.0,
-              // height: 84.0,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  // style: BorderStyle.none  ,
-                  width: 10.0,
-                  color: Colors.yellow,
-                ),
-                shape: BoxShape.rectangle,
-                color: Colors.red.shade500,
-                borderRadius: const BorderRadius.all(Radius.circular(25.0)),
-              ),
-              child: Text(
-                // goSyncHeading,
-                AppLocalizations.of(context)!.goSyncHeading,
-                overflow: TextOverflow.fade,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  // color: Colors.blue[900],
-                  color: Colors.yellow,
-                  // backgroundColor: Color.fromARGB(255, 207, 160, 17),
-                  backgroundColor: Colors.red,
-                  fontStyle: FontStyle.italic,
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-            const Padding(padding: EdgeInsets.all(16.0)),
-            SelectableText(
-              // Padding(padding: EdgeInsets.all(8.0)) as String,
-              // ethCheckGoHelp,
-              AppLocalizations.of(context)!.goSyncHeading,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.blue,
-                fontStyle: FontStyle.italic,
-                fontSize: 20.0,
-              ),
-            ),
-            const Padding(padding: EdgeInsets.all(8.0)),
-            //start instructions here after header
-            const Padding(padding: EdgeInsets.all(8.0)),
-            const Padding(
-              padding: EdgeInsets.all(24.0),
-              child: SelectableText(
-                // Padding(padding: EdgeInsets.all(8.0)) as String,
-                // ethCheckGoHelp,
-                ethInstallGolangInstallInstructions,
-                // AppLocalizations.of(context)!.goSyncHeading,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  color: Colors.yellow,
-                  fontStyle: FontStyle.italic,
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
-            const Padding(padding: EdgeInsets.all(8.0)),
-            const Padding(
-              padding: EdgeInsets.all(24.0),
-              child: SelectableText(
-                // Padding(padding: EdgeInsets.all(8.0)) as String,
-                // ethCheckGoHelp,
-                ethInstallGolangInstallInstructions,
-                // AppLocalizations.of(context)!.goSyncHeading,
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                  color: Colors.purple,
-                  fontStyle: FontStyle.italic,
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
+            // Container(
+            //   padding: const EdgeInsets.all(15.0),
+            //   // width: 300.0,
+            //   // height: 84.0,
+            //   decoration: BoxDecoration(
+            //     border: Border.all(
+            //       // style: BorderStyle.none  ,
+            //       width: 10.0,
+            //       color: Colors.yellow,
+            //     ),
+            //     shape: BoxShape.rectangle,
+            //     color: Colors.red.shade500,
+            //     borderRadius: const BorderRadius.all(Radius.circular(25.0)),
+            //   ),
+            //   child: Text(
+            //     // goSyncHeading,
+            //     AppLocalizations.of(context)!.goSyncHeading,
+            //     overflow: TextOverflow.fade,
+            //     textAlign: TextAlign.center,
+            //     style: const TextStyle(
+            //       // color: Colors.blue[900],
+            //       color: Colors.yellow,
+            //       // backgroundColor: Color.fromARGB(255, 207, 160, 17),
+            //       backgroundColor: Colors.red,
+            //       fontStyle: FontStyle.italic,
+            //       fontSize: 24.0,
+            //       fontWeight: FontWeight.bold,
+            //     ),
+            //   ),
+            // ),
+            // const Padding(padding: EdgeInsets.all(16.0)),
+            // SelectableText(
+            //   // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //   // ethCheckGoHelp,
+            //   AppLocalizations.of(context)!.goSyncHeading,
+            //   textAlign: TextAlign.center,
+            //   style: const TextStyle(
+            //     color: Colors.blue,
+            //     fontStyle: FontStyle.italic,
+            //     fontSize: 20.0,
+            //   ),
+            // ),
             // const Padding(padding: EdgeInsets.all(8.0)),
-            const Padding(padding: EdgeInsets.all(8.0)),
-            const Padding(
-              padding: EdgeInsets.all(44.0),
-              child: SelectableText(
-                // Padding(padding: EdgeInsets.all(8.0)) as String,
-                // ethCheckGoHelp,
-                ethInstallGolangInstallInstructions,
-                // AppLocalizations.of(context)!.goSyncHeading,
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  color: Colors.orange,
-                  // fontStyle: FontStyle.italic,
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
-            const Padding(padding: EdgeInsets.all(8.0)),
-
-            const SelectableText(
-              // Padding(padding: EdgeInsets.all(8.0)) as String,
-              // ethCheckGoHelp,
-              ethInstallGolangInstallInstructions,
-              // AppLocalizations.of(context)!.goSyncHeading,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.pink,
-                // fontStyle: FontStyle.italic,
-                fontSize: 20.0,
-              ),
-            ),
-            const Padding(padding: EdgeInsets.all(8.0)),
-
-            const SelectableText(
-              // Padding(padding: EdgeInsets.all(8.0)) as String,
-              // ethCheckGoHelp,
-              ethInstallGolangInstallInstructions,
-              // AppLocalizations.of(context)!.goSyncHeading,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.cyanAccent,
-                // fontStyle: FontStyle.italic,
-                fontSize: 20.0,
-              ),
-            ),
+            // //start instructions here after header
             // const Padding(padding: EdgeInsets.all(8.0)),
-            const Padding(padding: EdgeInsets.all(8.0)),
-            Padding(
-              padding: const EdgeInsets.all(44.0),
-              child: SelectableText(
-                // ethInstallGolangInstallInstructions,
-                AppLocalizations.of(context)!.golangInstallInstructions,
-                textAlign: TextAlign.left,
-                style: const TextStyle(
-                  color: Colors.indigoAccent,
-                  // fontStyle: FontStyle.italic,
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
+            // const Padding(
+            //   padding: EdgeInsets.all(24.0),
+            //   child: SelectableText(
+            //     // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //     // ethCheckGoHelp,
+            //     ethInstallGolangInstallInstructions,
+            //     // AppLocalizations.of(context)!.goSyncHeading,
+            //     textAlign: TextAlign.left,
+            //     style: TextStyle(
+            //       color: Colors.yellow,
+            //       fontStyle: FontStyle.italic,
+            //       fontSize: 20.0,
+            //     ),
+            //   ),
+            // ),
             // const Padding(padding: EdgeInsets.all(8.0)),
-            Padding(
-              padding: const EdgeInsets.all(44.0),
-              child: SelectableText(
-                // ethInstallGolangInstallInstructions,
-                AppLocalizations.of(context)!.golangInstallInstructions2,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: Colors.pinkAccent,
-                  // fontStyle: FontStyle.italic,
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
-            const Padding(padding: EdgeInsets.all(8.0)),
-            Text(
-              // Padding(padding: EdgeInsets.all(8.0)) as String,
-              // ethCheckGoHelp,
-              AppLocalizations.of(context)!.ethCheckGoHelp,
-              textAlign: TextAlign.right,
-              style: const TextStyle(
-                color: Colors.green,
-                fontStyle: FontStyle.italic,
-                fontSize: 20.0,
-              ),
-            ),
-            // selectable text.
-            const Padding(padding: EdgeInsets.all(16.0)),
-            SelectableText(
-              // Padding(padding: EdgeInsets.all(8.0)) as String,
-              // ethCheckGoHelp,
-              AppLocalizations.of(context)!.ethCheckGoHelp,
-              textAlign: TextAlign.left,
-              style: const TextStyle(
-                color: Colors.yellow,
-                fontStyle: FontStyle.italic,
-                fontSize: 20.0,
-              ),
-            ),
-            // padded text
-            const Padding(padding: EdgeInsets.all(16.0)),
-            Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: SelectableText(
-                // ethCheckGoHelp,
-                AppLocalizations.of(context)!.ethCheckGoHelp,
-                textAlign: TextAlign.left,
-                style: const TextStyle(
-                  color: Colors.cyanAccent,
-                  fontStyle: FontStyle.normal,
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
-
-            const Padding(padding: EdgeInsets.all(16.0)),
-            Text(
-              // Padding(padding: EdgeInsets.all(8.0)) as String,
-              // padding: const EdgeInsets.all(8.0)
-              // ethCheckGoHelp,
-              AppLocalizations.of(context)!.ethCheckGoHelp,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                // padding: const EdgeInsets.all(8.0)
-                color: Colors.blue,
-                fontStyle: FontStyle.normal,
-                fontSize: 20.0,
-              ),
-            ),
-            // 4th
-
-            Column(
-              children: [
-                // const Padding(padding: Edg eInsets.all(30.0)),
-                Image.asset(
-                  _kAssets12,
-                  // height: 200.0,
-                  // width: 300.0,
-                ),
-              ],
-            ),
+            // const Padding(
+            //   padding: EdgeInsets.all(24.0),
+            //   child: SelectableText(
+            //     // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //     // ethCheckGoHelp,
+            //     ethInstallGolangInstallInstructions,
+            //     // AppLocalizations.of(context)!.goSyncHeading,
+            //     textAlign: TextAlign.right,
+            //     style: TextStyle(
+            //       color: Colors.purple,
+            //       fontStyle: FontStyle.italic,
+            //       fontSize: 20.0,
+            //     ),
+            //   ),
+            // ),
+            // // const Padding(padding: EdgeInsets.all(8.0)),
+            // const Padding(padding: EdgeInsets.all(8.0)),
+            // const Padding(
+            //   padding: EdgeInsets.all(44.0),
+            //   child: SelectableText(
+            //     // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //     // ethCheckGoHelp,
+            //     ethInstallGolangInstallInstructions,
+            //     // AppLocalizations.of(context)!.goSyncHeading,
+            //     textAlign: TextAlign.left,
+            //     style: TextStyle(
+            //       color: Colors.orange,
+            //       // fontStyle: FontStyle.italic,
+            //       fontSize: 20.0,
+            //     ),
+            //   ),
+            // ),
+            // const Padding(padding: EdgeInsets.all(8.0)),
+            //
+            // const SelectableText(
+            //   // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //   // ethCheckGoHelp,
+            //   ethInstallGolangInstallInstructions,
+            //   // AppLocalizations.of(context)!.goSyncHeading,
+            //   textAlign: TextAlign.center,
+            //   style: TextStyle(
+            //     color: Colors.pink,
+            //     // fontStyle: FontStyle.italic,
+            //     fontSize: 20.0,
+            //   ),
+            // ),
+            // const Padding(padding: EdgeInsets.all(8.0)),
+            //
+            // const SelectableText(
+            //   // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //   // ethCheckGoHelp,
+            //   ethInstallGolangInstallInstructions,
+            //   // AppLocalizations.of(context)!.goSyncHeading,
+            //   textAlign: TextAlign.center,
+            //   style: TextStyle(
+            //     color: Colors.cyanAccent,
+            //     // fontStyle: FontStyle.italic,
+            //     fontSize: 20.0,
+            //   ),
+            // ),
+            // // const Padding(padding: EdgeInsets.all(8.0)),
+            // const Padding(padding: EdgeInsets.all(8.0)),
+            // Padding(
+            //   padding: const EdgeInsets.all(44.0),
+            //   child: SelectableText(
+            //     // ethInstallGolangInstallInstructions,
+            //     AppLocalizations.of(context)!.golangInstallInstructions,
+            //     textAlign: TextAlign.left,
+            //     style: const TextStyle(
+            //       color: Colors.indigoAccent,
+            //       // fontStyle: FontStyle.italic,
+            //       fontSize: 20.0,
+            //     ),
+            //   ),
+            // ),
+            // // const Padding(padding: EdgeInsets.all(8.0)),
+            // Padding(
+            //   padding: const EdgeInsets.all(44.0),
+            //   child: SelectableText(
+            //     // ethInstallGolangInstallInstructions,
+            //     AppLocalizations.of(context)!.golangInstallInstructions2,
+            //     textAlign: TextAlign.center,
+            //     style: const TextStyle(
+            //       color: Colors.pinkAccent,
+            //       // fontStyle: FontStyle.italic,
+            //       fontSize: 20.0,
+            //     ),
+            //   ),
+            // ),
+            // const Padding(padding: EdgeInsets.all(8.0)),
+            // Text(
+            //   // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //   // ethCheckGoHelp,
+            //   AppLocalizations.of(context)!.ethCheckGoHelp,
+            //   textAlign: TextAlign.right,
+            //   style: const TextStyle(
+            //     color: Colors.green,
+            //     fontStyle: FontStyle.italic,
+            //     fontSize: 20.0,
+            //   ),
+            // ),
+            // // selectable text.
+            // const Padding(padding: EdgeInsets.all(16.0)),
+            // SelectableText(
+            //   // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //   // ethCheckGoHelp,
+            //   AppLocalizations.of(context)!.ethCheckGoHelp,
+            //   textAlign: TextAlign.left,
+            //   style: const TextStyle(
+            //     color: Colors.yellow,
+            //     fontStyle: FontStyle.italic,
+            //     fontSize: 20.0,
+            //   ),
+            // ),
+            // // padded text
+            // const Padding(padding: EdgeInsets.all(16.0)),
+            // Padding(
+            //   padding: const EdgeInsets.all(24.0),
+            //   child: SelectableText(
+            //     // ethCheckGoHelp,
+            //     AppLocalizations.of(context)!.ethCheckGoHelp,
+            //     textAlign: TextAlign.left,
+            //     style: const TextStyle(
+            //       color: Colors.cyanAccent,
+            //       fontStyle: FontStyle.normal,
+            //       fontSize: 20.0,
+            //     ),
+            //   ),
+            // ),
+            //
+            // const Padding(padding: EdgeInsets.all(16.0)),
+            // Text(
+            //   // Padding(padding: EdgeInsets.all(8.0)) as String,
+            //   // padding: const EdgeInsets.all(8.0)
+            //   // ethCheckGoHelp,
+            //   AppLocalizations.of(context)!.ethCheckGoHelp,
+            //   textAlign: TextAlign.center,
+            //   style: const TextStyle(
+            //     // padding: const EdgeInsets.all(8.0)
+            //     color: Colors.blue,
+            //     fontStyle: FontStyle.normal,
+            //     fontSize: 20.0,
+            //   ),
+            // ),
+            // // 4th
+            //
+            // Column(
+            //   children: [
+            //     // const Padding(padding: Edg eInsets.all(30.0)),
+            //     Image.asset(
+            //       _kAssets12,
+            //       // height: 200.0,
+            //       // width: 300.0,
+            //     ),
+            //   ],
+            // ),
 
             Image.asset(
               _kAssets12,

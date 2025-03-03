@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './gosync_navdrawer.dart';
@@ -471,7 +471,8 @@ class GoSyncScrollbar0 extends StatelessWidget {
               ),
               child: Text(
                 // drawerHeader 'go designers,
-                AppLocalizations.of(context)!.drawerHeader2,
+                "drawer hed 2",
+                // AppLocalizations.of(context)!.drawerHeader2,
                 // style: const TextStyle(color: Colors.purpleAccent),
                 textAlign: TextAlign.center,
                 // overflow: TextOverflow.visible,
@@ -528,7 +529,8 @@ class GoSyncScrollbar0 extends StatelessWidget {
                       color: Colors.teal,
                     ),
                     title: Text(
-                      AppLocalizations.of(context)!.visitGoDevPlay,
+                      "visit google play",
+                      // AppLocalizations.of(context)!.visitGoDevPlay,
                       style: const TextStyle(color: Colors.yellow),
                     ),
                     subtitle: const Text(
@@ -1304,7 +1306,8 @@ class GoSyncScrollbar0 extends StatelessWidget {
               // },
               child: Text(
                 // drawerHeader 'go designers,
-                AppLocalizations.of(context)!.drawerHeader3,
+                "drawerhead 3",
+                // AppLocalizations.of(context)!.drawerHeader3,
                 // style: const TextStyle(color: Colors.purpleAccent),
                 textAlign: TextAlign.center,
                 // overflow: TextOverflow.visible,
@@ -1575,7 +1578,8 @@ class GoSyncScrollbar0 extends StatelessWidget {
                 ),
                 child: Text(
                     // drawerHeader 'go designers,
-                    AppLocalizations.of(context)!.drawerHeader4,
+                  "drawer hed 4",
+                    // AppLocalizations.of(context)!.drawerHeader4,
                     // style: const TextStyle(color: Colors.purpleAccent),
                     textAlign: TextAlign.center,
                     // overflow: TextOverflow.visible,
@@ -1601,7 +1605,8 @@ class GoSyncScrollbar0 extends StatelessWidget {
               // },
               child: Text(
                 // drawerHeader 'go designers,
-                AppLocalizations.of(context)!.drawerHeader4,
+                "drawer head 4",
+                // AppLocalizations.of(context)!.drawerHeader4,
                 // style: const TextStyle(color: Colors.purpleAccent),
                 textAlign: TextAlign.center,
                 // overflow: TextOverflow.visible,
