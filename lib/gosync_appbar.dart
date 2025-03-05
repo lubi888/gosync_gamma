@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';
 import './gosync_text.dart';
+// import './gosync_text.dart';
+
+// import './gosync_text.dart';
 // //   // appBar: AppBar(
 // //   // Here we take the value from the GoSyncHome object that was created by
 // //   // the App.build method, and use it to set our appbar title.
@@ -62,7 +65,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
         // elevation/: 30.0,
         title: Text(
           // goSyncTitle,
-          "title is today",
+          // "title is today",
+          goSyncTitle,
           // AppLocalizations.of(context)!.title,
           textAlign: TextAlign.center,
           style: const TextStyle(

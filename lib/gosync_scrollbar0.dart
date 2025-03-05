@@ -65,7 +65,7 @@ class GoSyncScrollbar0 extends StatelessWidget {
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.02.27',
+              'Home \nInstall Golang Page 0 \n2025.03.05',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),
