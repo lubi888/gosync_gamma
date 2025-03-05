@@ -83,6 +83,17 @@ class GoSyncScrollbar0 extends StatelessWidget {
               childrenPadding:
                   const EdgeInsets.only(left: 30), //children padding
               children: [
+                ColoredBox(
+                  color: Colors.green,
+                  child: Material(
+                    child: SwitchListTile(
+                      tileColor: Colors.red,
+                      title: const Text('SwitchListTile with red background'),
+                      value: true,
+                      onChanged:(bool? value) { },
+                    ),
+                  ),
+                ),
                 ListTile(
                     leading: const Icon(
                       // Icons.tv,

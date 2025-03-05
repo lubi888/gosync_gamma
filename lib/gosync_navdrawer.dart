@@ -82,6 +82,7 @@ class GoSyncNavDrawer extends StatelessWidget {
             ),
           ),
           ExpansionTile(
+            initiallyExpanded: true,
             title: const Text(
               "app info & settings",
               textAlign: TextAlign.center,
@@ -110,6 +111,18 @@ class GoSyncNavDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.pushNamed(context, '/');
                   }),
+              // switch theme selection
+              ColoredBox(
+                color: Colors.green,
+                child: Material(
+                  child: SwitchListTile(
+                    tileColor: Colors.red,
+                    title: const Text('SwitchListTile with red background'),
+                    value: true,
+                    onChanged:(bool? value) { },
+                  ),
+                ),
+              ),
               // SwitchListTile(
               //     // bool _value = false;
               //     secondary: const Icon(
