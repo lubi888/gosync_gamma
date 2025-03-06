@@ -29,8 +29,8 @@ class GoSync extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // title: 'gosync',
-      title: goSyncTitle,
+      //webpage tab title
+      title: goSyncTitle2,
       // theme: ThemeData(
       //   // This is the theme of your application.
       //   //
