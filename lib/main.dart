@@ -145,6 +145,9 @@ class _GoSyncHomePageState extends State<GoSyncHomePage> {
   //   });
   // }
 
+  // ThemeMode _themeMode = ThemeMode.light;
+
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -154,6 +157,12 @@ class _GoSyncHomePageState extends State<GoSyncHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      // title: 'Material App',
+      // themeMode: _themeMode,
+      // theme: ThemeData(),
+      // darkTheme: ThemeData.dark(),
+      // home: Home(),
+
       appBar: GoSyncAppBar(
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar

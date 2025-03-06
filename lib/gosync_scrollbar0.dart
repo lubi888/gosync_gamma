@@ -47,6 +47,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
     ScrollController scrollbarController = ScrollController();
 
     return Scaffold(
+    // return MaterialApp(
       // print("home loaded GoSyncScrollbar0 Home");
       // return const Placeholder();
       // debugPrint('scrollbar0 loaded install Golang');
