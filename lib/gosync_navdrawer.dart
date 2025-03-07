@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
-import './main.dart';
+import './mainStatlessState.dart';
 import './gosync_appbar.dart';
 import './gosync_scrollbar0.dart';
 import './gosync_scrollbar1.dart';

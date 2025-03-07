@@ -4,8 +4,8 @@ import './gosync_scrollbar0.dart';
 import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
 
-class GoSyncHome extends StatelessWidget {
-  const GoSyncHome({super.key, required this.title});
+class GoSyncHomePage extends StatelessWidget {
+  const GoSyncHomePage({super.key, required this.title});
 
   final String title;
 
