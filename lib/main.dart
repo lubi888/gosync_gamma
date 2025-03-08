@@ -205,7 +205,7 @@ class _GoSyncHomePageState extends State<GoSyncHome> {
         // themeMode: ThemeMode.system,
         initialRoute: '/',
         routes: {
-          '/home': (BuildContext context) => const GoSyncHome(title: goSyncTitle),
+          '/home': (BuildContext context) => const GoSyncHomePage(title: goSyncTitle),
           '/appbar': (BuildContext context) => const GoSyncAppBar(),
           // '/about': (BuildContext context) => const GoSyncAbout(),
           '/scrollbar0': (BuildContext context) => const GoSyncScrollbar0(),
@@ -303,11 +303,11 @@ class _GoSyncHomePageState extends State<GoSyncHome> {
     //   //     ],
     //   //   ),
     //   // ),
-    //   // floatingActionButton: FloatingActionButton(
-    //   //   onPressed: _incrementCounter,
-    //   //   tooltip: 'Increment',
-    //   //   child: const Icon(Icons.add),
-    //   // ), // This trailing comma makes auto-formatting nicer for build methods.
+    //   floatingActionButton: FloatingActionButton(
+    //     onPressed: _incrementCounter,
+    //     tooltip: 'Increment',
+    //     child: const Icon(Icons.add),
+    //   ), // This trailing comma makes auto-formatting nicer for build methods.
     // );
   }
 }

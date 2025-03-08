@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './gosync_navdrawer.dart';
+import './gosync_appbar.dart';
 import './gosync_scrollbar0.dart';
 import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
@@ -14,6 +15,7 @@ class GoSyncHomePage extends StatelessWidget {
     () => Scaffold.of(context).openDrawer();
     debugPrint("gosync_home & tabs loaded");
     return const Scaffold(
+      appBar: GoSyncAppBar(),
       drawer: GoSyncNavDrawer(),
       body: TabBarView(
         children: <Widget>[
@@ -22,6 +24,12 @@ class GoSyncHomePage extends StatelessWidget {
           GoSyncScrollbar2(),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        // onPressed: _incrementCounter,
+        onPressed: null,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
