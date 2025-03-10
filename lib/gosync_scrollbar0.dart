@@ -47,7 +47,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
     ScrollController scrollbarController = ScrollController();
 
     return Scaffold(
-    // return MaterialApp(
+      // return MaterialApp(
       // print("home loaded GoSyncScrollbar0 Home");
       // return const Placeholder();
       // debugPrint('scrollbar0 loaded install Golang');
@@ -80,7 +80,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.03.08',
+              'Home \nInstall Golang Page 0 \n2025.03.10',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),

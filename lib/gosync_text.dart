@@ -1,8 +1,8 @@
 // import 'package:flutter_linkify/flutter_linkify.dart';
 // master text file for transtations using arb files l10n.
 
-const String goSyncTitle = "goSyncTitle 20250307";
-const String goSyncTitle2 = "goSyncTitle2 0308";
+const String goSyncTitle = "goSyncTitle 20250310";
+const String goSyncTitle2 = "goSyncTitle2 0310";
 const String home = "home";
 const String gocode = "golang installation";
 const String online = "online community";
