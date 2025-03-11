@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gosync_gamma/mainGenericFtateful.dart';
 import 'package:url_launcher/url_launcher.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import './main.dart';
+import './gosync_home.dart';
 import './gosync_navdrawer.dart';
 import './gosync_text.dart';
 
@@ -17,7 +20,7 @@ import './gosync_text.dart';
 // import './ethsync_scrollbar0.dart';
 // import './ethsync_scrollbar1.dart';
 
-const String _kAsset1 = 'assets/images/golang_developers.png';
+// const String _kAsset1 = 'assets/images/golang_developers.png';
 const String _kAsset2 = 'assets/images/_kAsset32.png';
 const String _kAsset3 = 'assets/images/footer-gopher.jpg';
 const String _kAsset4 = 'assets/images/gethTerm.png';
@@ -35,6 +38,7 @@ class GoSyncScrollbar0 extends StatefulWidget {
 }
 
 class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
+  bool _value = false;
   //   @override
   //   Widget build(BuildContext context) {
   //     return const Placeholder();
@@ -47,15 +51,6 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
     ScrollController scrollbarController = ScrollController();
 
     return Scaffold(
-      // return MaterialApp(
-      // print("home loaded GoSyncScrollbar0 Home");
-      // return const Placeholder();
-      // debugPrint('scrollbar0 loaded install Golang');
-
-      // final yourScrollScrollbarController = ScrollScrollbarController();
-      // const Scaffold();
-      // return Scrollbar(
-      // appBar: AppBar,
       appBar: AppBar(
         // title: const Text('Tiny AppBar with hamburger button'),
         leading: Builder(
@@ -72,15 +67,11 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
       drawer: const GoSyncNavDrawer(),
       body: Scrollbar(
         controller: scrollbarController,
-        // thumbVisibility: true,
-        // controller: yourScrollController,
-        // controller: ScrollController.hasClients,
-        // controller: PrimaryScrollController.of(context),
         child: ListView(
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.03.10',
+              'Home \nInstall Golang Page 0 \n2025.03.11',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),
@@ -110,6 +101,25 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     ),
                   ),
                 ),
+                ColoredBox(
+                  color: Colors.blue,
+                  child: Material(
+                    child: SwitchListTile(
+                      tileColor: Colors.yellowAccent,
+                      title: const Text('theme switcher'),
+                      value: _value,
+                      onChanged: (value) {
+                        _value = value;
+                        if (_value) {
+                          GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+                        } else {
+                          GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
+                        }
+                      },
+                    ),
+                  ),
+                ),
+
                 ListTile(
                   leading: const Icon(
                     // Icons.tv,

@@ -31,14 +31,18 @@ class GoSyncHome extends StatefulWidget {
   State<GoSyncHome> createState() => _GoSyncHomeState();
   // static <_GoSyncHomeState>? of(BuildContext context) =>
   //  context.findAncestorStateOfType<_GoSyncHomeState>();
+  // _GoSyncHomeState createState() => _GoSyncHomeState();
+  static _GoSyncHomeState? of(BuildContext context) =>
+      context.findAncestorStateOfType<_GoSyncHomeState>();
 
   // static
   // static <GoSyncHomePage>? of(BuildContext)
-  // static <GoSyncHomePage>? of(BuildContext context) => context.findAncestorStateOfType<_GoSyncHomePageState>();
+  // static <_GoSyncHomeState>? of(BuildContext context) => context.findAncestorStateOfType<_GoSyncHomeState>();
 }
 
 class _GoSyncHomeState extends State<GoSyncHome> {
   // int _counter = 0;
+  // static <_GoSyncHomeState>? of(BuildContext context) => context.findAncestorStateOfType<_GoSyncHomeState>();
 
   // void _incrementCounter() {
   //   setState(() {
@@ -50,8 +54,14 @@ class _GoSyncHomeState extends State<GoSyncHome> {
   //     _counter++;
   //   });
   // }
+  // static <GoSyncHomePage>? of(BuildContext context) => context.findAncestorStateOfType<_GoSyncHomePageState>();
 
-  final ThemeMode _themeMode = ThemeMode.light;
+  ThemeMode _themeMode = ThemeMode.light;
+  void changeTheme(ThemeMode themeMode) {
+    setState(() {
+      _themeMode = themeMode;
+    });
+  }
   // final ThemeMode _themeMode = ThemeMode.dark;
   // themeMode: ThemeMode.light,
   // themeMode: ThemeMode.dark,
