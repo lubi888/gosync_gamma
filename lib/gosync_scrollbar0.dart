@@ -38,7 +38,10 @@ class GoSyncScrollbar0 extends StatefulWidget {
 }
 
 class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
+  // get _value => _value;
   bool _value = false;
+
+  // bool _value = false;
   //   @override
   //   Widget build(BuildContext context) {
   //     return const Placeholder();
