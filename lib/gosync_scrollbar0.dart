@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gosync_gamma/mainGenericFtateful.dart';
+// import 'package:gosync_gamma/mainGenericFtateful.dart';
 import 'package:url_launcher/url_launcher.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './main.dart';
-import './gosync_home.dart';
+// import './gosync_home.dart';
 import './gosync_navdrawer.dart';
 import './gosync_text.dart';
 
@@ -41,13 +41,6 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
   // get _value => _value;
   bool _value = false;
 
-  // bool _value = false;
-  //   @override
-  //   Widget build(BuildContext context) {
-  //     return const Placeholder();
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     debugPrint('scrollbar0 loaded install Golang');
@@ -74,7 +67,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.03.11',
+              'Home \nInstall Golang Page 0 \n2025.03.12',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),

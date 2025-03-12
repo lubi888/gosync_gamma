@@ -4,6 +4,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 // import './mainStatlessState.dart';
+import './main.dart';
+// import './gosync_home.dart';
 // import './gosync_appbar.dart';
 // import './gosync_scrollbar0.dart';
 // import './gosync_scrollbar1.dart';
@@ -26,11 +28,17 @@ const String _kAsset2 = 'assets/images/_kAsset32.png';
 const String _kAsset3 = 'assets/images/footer-gopher.jpg';
 const String _kAsset4 = 'assets/images/gethTerm.png';
 
-class GoSyncNavDrawer extends StatelessWidget {
+class GoSyncNavDrawer extends StatefulWidget {
   const GoSyncNavDrawer({super.key});
 
+  @override
+  State<GoSyncNavDrawer> createState() => _GoSyncNavDrawerState();
+}
+
+class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
+  bool _value = false;
+
   // bool _value = false;
-  // get _value => _value;
   @override
   Widget build(BuildContext context) {
     debugPrint('navdrawer opened at [time]');
@@ -39,7 +47,7 @@ class GoSyncNavDrawer extends StatelessWidget {
     return Drawer(
       width: 400.0,
       // elevation: 50.0,
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.black,
       // shadowColor: Colors.redAccent,
       // shape: ,
       // child: SafeArea(
@@ -110,8 +118,28 @@ class GoSyncNavDrawer extends StatelessWidget {
                   child: SwitchListTile(
                     tileColor: Colors.red,
                     title: const Text('SwitchListTile with red background'),
-                    value: true,
+                    value: false,
                     onChanged: (bool? value) {},
+                  ),
+                ),
+              ),
+              ColoredBox(
+                color: Colors.deepOrangeAccent,
+                child: Material(
+                  child: SwitchListTile(
+                    tileColor: Colors.yellow,
+                    title: const Text('SwitchListTile theme selector'),
+                    // value: true,
+                    // onChanged: (bool? value) {},
+                    value: _value,
+                    onChanged: (value) {
+                      _value = value;
+                      if (_value) {
+                        GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+                      } else {
+                        GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
+                      }
+                    },
                   ),
                 ),
               ),
@@ -3192,3 +3220,16 @@ Future<void> _launchGoogleCloudGo() async {
     throw Exception('Could not launch $_urlGoogleCloudGo');
   }
 }
+
+// statless navdrawer
+// class GoSyncNavDrawer extends StatelessWidget {
+//   const GoSyncNavDrawer({super.key});
+
+//   // bool _value = false;
+//   // get _value => _value;
+//   @override
+//   Widget build(BuildContext context) {
+//     debugPrint('navdrawer opened at [time]');
+//     print(TimeOfDay.now());
+//     // Scaffold.of(context).openDrawer();
+//     return Drawer(
