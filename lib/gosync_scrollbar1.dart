@@ -66,8 +66,11 @@ class GoSyncScrollbar1 extends StatelessWidget {
 
     const snackBarGoodbye = SnackBar(
       backgroundColor: Colors.green,
-      content: Text('Thanks for visiting goSync. Goodbye!',
-          textAlign: TextAlign.center, style: TextStyle(fontSize: 22.0)),
+      content: Text(
+        'Thanks for visiting goSync. Goodbye!',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 22.0),
+      ),
       duration: Duration(seconds: 3),
     );
     return Scaffold(
@@ -84,7 +87,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
           },
         ),
       ),
-      drawer: const GoSyncNavDrawer(),
+      drawer: GoSyncNavDrawer(),
       body: Scrollbar(
         controller: scrollbarController,
         child: ListView(
@@ -97,10 +100,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
               // width: 300.0,
               // height: 80.0,
               decoration: BoxDecoration(
-                border: Border.all(
-                  width: 10.0,
-                  color: Colors.yellow,
-                ),
+                border: Border.all(width: 10.0, color: Colors.yellow),
                 shape: BoxShape.rectangle,
                 color: Colors.red,
                 borderRadius: const BorderRadius.all(Radius.circular(25.0)),
@@ -310,9 +310,10 @@ class GoSyncScrollbar1 extends StatelessWidget {
                 "FlutterBeads Golang Install on Windows, Linux, Apple",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 34.0,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold),
+                  fontSize: 34.0,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
                 // selectionColor: Colors.green,
               ),
             ),
@@ -346,8 +347,9 @@ class GoSyncScrollbar1 extends StatelessWidget {
                 onTap: () {
                   debugPrint('gopher image inkwell tapped');
                   // ScaffoldMessenger.of(context).clearSnackBars();
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(snackBarGoodbye); // const SnackBar(
+                  ScaffoldMessenger.of(
+                    context,
+                  ).showSnackBar(snackBarGoodbye); // const SnackBar(
                   //launch golang.org || go.dev
                   _launchGolangDLUrl();
                 },
@@ -451,10 +453,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
               // height: 260.0,
               decoration: BoxDecoration(
                 // image: DecorationImage(image: AssetImage(_kAsset2)),
-                border: Border.all(
-                  width: 10.0,
-                  color: Colors.green,
-                ),
+                border: Border.all(width: 10.0, color: Colors.green),
                 shape: BoxShape.rectangle,
                 // color: Colors.green.shade600,
                 color: Colors.black,
@@ -485,10 +484,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 // image: DecorationImage(image: AssetImage(_kAsset2)),
-                border: Border.all(
-                  width: 10.0,
-                  color: Colors.green,
-                ),
+                border: Border.all(width: 10.0, color: Colors.green),
                 shape: BoxShape.rectangle,
                 // color: Colors.green.shade600,
                 color: Colors.black,
@@ -530,8 +526,9 @@ class GoSyncScrollbar1 extends StatelessWidget {
                     hoverColor: Colors.lightGreen,
                     onPressed: () {
                       Clipboard.setData(const ClipboardData(text: goHelloCode));
-                      ScaffoldMessenger.of(context)
-                          .showSnackBar(snackBarGoCodeCopy);
+                      ScaffoldMessenger.of(
+                        context,
+                      ).showSnackBar(snackBarGoCodeCopy);
                     },
                     child: const Icon(
                       Icons.copy,
@@ -546,14 +543,10 @@ class GoSyncScrollbar1 extends StatelessWidget {
             // 3rd container eg green box   copy & open go playland.
             Container(
               // FloatingActionButtonLocation.endTop;
-
               padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 // image: DecorationImage(image: AssetImage(_kAsset2)),
-                border: Border.all(
-                  width: 10.0,
-                  color: Colors.green,
-                ),
+                border: Border.all(width: 10.0, color: Colors.green),
                 shape: BoxShape.rectangle,
                 // color: Colors.green.shade600,
                 color: Colors.black,
@@ -579,11 +572,11 @@ class GoSyncScrollbar1 extends StatelessWidget {
                       fontSize: 20.0,
                     ),
                   ),
+
                   // FloatingActionButtonLocation.centerTop,
                   // FloatingActionButtonLocation.endTop(
                   // static const
                   // FloatingActionButtonLocation endTop = _EndTopFabLocation();
-
                   FloatingActionButton(
                     // onPressed: () {debugPrint('that is a print');},
                     backgroundColor: Colors.black,
@@ -593,8 +586,9 @@ class GoSyncScrollbar1 extends StatelessWidget {
                     hoverColor: Colors.lightGreen,
                     onPressed: () {
                       Clipboard.setData(const ClipboardData(text: goHelloCode));
-                      ScaffoldMessenger.of(context)
-                          .showSnackBar(snackBarGoCodeCopy);
+                      ScaffoldMessenger.of(
+                        context,
+                      ).showSnackBar(snackBarGoCodeCopy);
                       // _launchPlayGolangUrl();
                       _launchPlayGolangHelloCode();
                     },
@@ -615,10 +609,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
               // height: 260.0,
               decoration: BoxDecoration(
                 // image: DecorationImage(image: AssetImage(_kAsset2)),
-                border: Border.all(
-                  width: 10.0,
-                  color: Colors.white,
-                ),
+                border: Border.all(width: 10.0, color: Colors.white),
                 shape: BoxShape.rectangle,
                 // color: Colors.green.shade600,
                 color: Colors.black,
@@ -756,7 +747,6 @@ class GoSyncScrollbar1 extends StatelessWidget {
             //     ),
             //   ),
             // ),
-
             const Padding(padding: EdgeInsets.all(8.0)),
             // GO prog paradigm.
             const SelectableText(
@@ -792,6 +782,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
 
             // start instructions again here
             const Padding(padding: EdgeInsets.all(8.0)),
+
             //2nd header bar 'install golang'
             // Container(
             //   padding: const EdgeInsets.all(15.0),
@@ -1010,7 +1001,6 @@ class GoSyncScrollbar1 extends StatelessWidget {
             //     ),
             //   ],
             // ),
-
             Image.asset(
               _kAssets12,
               height: 800.0,
@@ -1267,11 +1257,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
                 fontSize: 20.0,
               ),
             ),
-            Image.asset(
-              _kAsset8,
-              height: 200.0,
-              width: 300.0,
-            ),
+            Image.asset(_kAsset8, height: 200.0, width: 300.0),
             Linkify(
               onOpen: (link) async {
                 if (await canLaunchUrl(link.url as Uri)) {
@@ -1289,11 +1275,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
                 fontSize: 20.0,
               ),
             ),
-            Image.asset(
-              _kAsset9,
-              height: 120.0,
-              width: 300.0,
-            ),
+            Image.asset(_kAsset9, height: 120.0, width: 300.0),
             Linkify(
               onOpen: (link) async {
                 if (await canLaunchUrl(link.url as Uri)) {
@@ -1311,11 +1293,7 @@ class GoSyncScrollbar1 extends StatelessWidget {
                 fontSize: 20.0,
               ),
             ),
-            Image.asset(
-              _kAssets10,
-              height: 200.0,
-              width: 300.0,
-            ),
+            Image.asset(_kAssets10, height: 200.0, width: 300.0),
             const SelectableText(
               ethGethWebsiteManyImplementations,
               textAlign: TextAlign.center,
@@ -1574,8 +1552,9 @@ class GoSyncScrollbar1 extends StatelessWidget {
             ),
             const Center(
               child: ElevatedButton(
-                  onPressed: _ethLightChainSync,
-                  child: Text('launch ether light chain sync')),
+                onPressed: _ethLightChainSync,
+                child: Text('launch ether light chain sync'),
+              ),
               // print that external link has been activated & client left.
               // print('scrollbar3 elevatedButton pressed');
             ),
@@ -1692,8 +1671,9 @@ class GoSyncScrollbar1 extends StatelessWidget {
 
 final Uri _uriGolangDL = Uri.https("go.dev", "dl");
 final Uri _uriGolangMain = Uri.https("go.dev");
-final Uri _launchLightChainSync =
-    Uri.parse('https://ethereum.org/en/developers/docs/nodes-and-clients/');
+final Uri _launchLightChainSync = Uri.parse(
+  'https://ethereum.org/en/developers/docs/nodes-and-clients/',
+);
 
 Future<void> _launchGolangDL() async {
   debugPrint("customer left app to go.dev/dl at");
@@ -1732,8 +1712,9 @@ Future<void> _launchGolangDLUrl() async {
 }
 
 // final Uri _urlPlayGolang = Uri.parse('https://play.golang.com/');
-final Uri _urlPlayGolangHelloCode =
-    Uri.parse('https://play.golang.com/p/IBY3bOlTbu9');
+final Uri _urlPlayGolangHelloCode = Uri.parse(
+  'https://play.golang.com/p/IBY3bOlTbu9',
+);
 
 Future<void> _launchPlayGolangHelloCode() async {
   debugPrint("customer left app to golang.org/dl at");

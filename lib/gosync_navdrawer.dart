@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 // import './mainStatlessState.dart';
 import './main.dart';
-// import './gosync_home.dart';
+import './gosync_home.dart';
 // import './gosync_appbar.dart';
 // import './gosync_scrollbar0.dart';
 // import './gosync_scrollbar1.dart';
@@ -28,17 +28,14 @@ const String _kAsset2 = 'assets/images/_kAsset32.png';
 const String _kAsset3 = 'assets/images/footer-gopher.jpg';
 const String _kAsset4 = 'assets/images/gethTerm.png';
 
-class GoSyncNavDrawer extends StatefulWidget {
-  const GoSyncNavDrawer({super.key});
+// class GoSyncNavDrawer extends StatelessWidget {
+//   GoSyncNavDrawer({super.key});
 
-  @override
-  State<GoSyncNavDrawer> createState() => _GoSyncNavDrawerState();
-}
+class GoSyncNavDrawer extends StatelessWidget {
+  GoSyncNavDrawer({super.key});
 
-class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
   bool _value = false;
 
-  // bool _value = false;
   @override
   Widget build(BuildContext context) {
     debugPrint('navdrawer opened at [time]');
@@ -143,34 +140,19 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   ),
                 ),
               ),
-              // SwitchListTile(
-              //     // bool _value = false;
-              //     secondary: const Icon(
-              //       Icons.color_lens_outlined,
-              //       color: Colors.yellow,
-              //     ),
-              //     title: const Text(
-              //       'theme selection',
-              //       style: TextStyle(color: Colors.red),
-              //     ),
-              //     subtitle: const Text(
-              //       'theme subtitle selection. switch this to alternate between light and dark theme',
-              //       style: TextStyle(color: Colors.yellow),
-              //     ),
-              //     // value: _toggled,
-              //     value: _value,
-              //     // onChanged: (bool? value) {},
-              //     onChanged: (value) {
-              //       SetState(()
-              //       {
-              //         _value = value;
-              //         if (_value)
-              //         GoSync.of(context)!.changeTheme(ThemeMode.light));
-              //         else
-              //           GoSync.of(context)!.changeTheme(ThemeMode.dark);
-              //       });
-              //     },),
-              //2nd attempt
+              SwitchListTile(
+                tileColor: Colors.deepOrange,
+                title: const Text('Theme selector'),
+                value: _value,
+                onChanged: (value) {
+                  _value = value;
+                  if (_value) {
+                    GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+                  } else {
+                    GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
+                  }
+                },
+              ),
               const ListTile(
                 isThreeLine: true,
                 leading: Icon(Icons.color_lens_outlined, color: Colors.yellow),

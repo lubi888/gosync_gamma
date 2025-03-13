@@ -60,14 +60,14 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
           },
         ),
       ),
-      drawer: const GoSyncNavDrawer(),
+      drawer: GoSyncNavDrawer(),
       body: Scrollbar(
         controller: scrollbarController,
         child: ListView(
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.03.12',
+              'Home \nInstall Golang Page 0 \n2025.03.13',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),
@@ -97,6 +97,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     ),
                   ),
                 ),
+                // coloured box 2 working
                 ColoredBox(
                   color: Colors.blue,
                   child: Material(
@@ -115,7 +116,6 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     ),
                   ),
                 ),
-
                 ListTile(
                   leading: const Icon(
                     // Icons.tv,

@@ -89,7 +89,7 @@ class GoSyncScrollbar2 extends StatelessWidget {
           },
         ),
       ),
-      drawer: const GoSyncNavDrawer(),
+      drawer: GoSyncNavDrawer(),
       body: Scrollbar(
         controller: scrollbarController,
         child: ListView(
@@ -145,18 +145,10 @@ class GoSyncScrollbar2 extends StatelessWidget {
             // ),
             // Container(
             Container(
-              child: Image.asset(
-                _kAsset3,
-                height: 200.0,
-                width: 300.0,
-              ),
+              child: Image.asset(_kAsset3, height: 200.0, width: 300.0),
             ),
             Container(
-              child: Image.asset(
-                _kAsset2,
-                height: 200.0,
-                width: 300.0,
-              ),
+              child: Image.asset(_kAsset2, height: 200.0, width: 300.0),
               // // onPressed: EthSyncUrl.launchURLGolangOrgDL(),
             ),
             Container(
@@ -478,11 +470,7 @@ class GoSyncScrollbar2 extends StatelessWidget {
               ),
             ),
             Container(
-              child: Image.asset(
-                _kAsset8,
-                height: 200.0,
-                width: 300.0,
-              ),
+              child: Image.asset(_kAsset8, height: 200.0, width: 300.0),
               // onPressed: EthSyncUrl.launchURLGethWeb,
             ),
             Container(
@@ -505,11 +493,7 @@ class GoSyncScrollbar2 extends StatelessWidget {
               ),
             ),
             Container(
-              child: Image.asset(
-                _kAsset9,
-                height: 120.0,
-                width: 300.0,
-              ),
+              child: Image.asset(_kAsset9, height: 120.0, width: 300.0),
               // onPressed: EthSyncUrl.launchURLGethWebDL,
               // onPressed: EthSyncUrl.launchURLGolangOrgDL(),
             ),
@@ -530,11 +514,7 @@ class GoSyncScrollbar2 extends StatelessWidget {
                 fontSize: 20.0,
               ),
             ),
-            Image.asset(
-              _kAssets10,
-              height: 200.0,
-              width: 300.0,
-            ),
+            Image.asset(_kAssets10, height: 200.0, width: 300.0),
             const SelectableText(
               ethGethWebsiteManyImplementations,
               textAlign: TextAlign.center,
@@ -801,8 +781,9 @@ class GoSyncScrollbar2 extends StatelessWidget {
             ),
             const Center(
               child: ElevatedButton(
-                  onPressed: _ethLightChainSync,
-                  child: Text('launch ether light chain sync')),
+                onPressed: _ethLightChainSync,
+                child: Text('launch ether light chain sync'),
+              ),
               // print that external link has been activated & client left.
               // print('scrollbar3 elevatedButton pressed');
             ),
@@ -946,8 +927,9 @@ class GoSyncScrollbar2 extends StatelessWidget {
 
 final Uri _uriGolangDL = Uri.https("go.dev", "dl");
 final Uri _uriGolangMain = Uri.https("go.dev");
-final Uri _launchLightChainSync =
-    Uri.parse('https://ethereum.org/en/developers/docs/nodes-and-clients/');
+final Uri _launchLightChainSync = Uri.parse(
+  'https://ethereum.org/en/developers/docs/nodes-and-clients/',
+);
 
 Future<void> _launchGolangDL() async {
   print("customer left app to go.dev/dl at");

@@ -19,7 +19,7 @@ class _GoSyncHomePageState extends State<GoSyncHomePage> {
   Widget build(BuildContext context) {
     () => Scaffold.of(context).openDrawer();
     debugPrint("gosync_home & tabs loaded");
-    return const Scaffold(
+    return Scaffold(
       appBar: GoSyncAppBar(),
       drawer: GoSyncNavDrawer(),
       body: TabBarView(
