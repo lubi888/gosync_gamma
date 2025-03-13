@@ -45,7 +45,7 @@ class GoSyncHome extends StatefulWidget {
 }
 
 class _GoSyncHomeState extends State<GoSyncHome> {
-  bool _themeValue = false;
+  // bool _themeValue = false;
 
   // int _counter = 0;
   // static <_GoSyncHomeState>? of(BuildContext context) => context.findAncestorStateOfType<_GoSyncHomeState>();
