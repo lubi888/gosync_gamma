@@ -35,6 +35,7 @@ class GoSyncNavDrawer extends StatelessWidget {
   GoSyncNavDrawer({super.key});
 
   bool _value = false;
+  get _GoSyncHomeState => State<GoSyncHome>;
 
   @override
   Widget build(BuildContext context) {
@@ -132,9 +133,13 @@ class GoSyncNavDrawer extends StatelessWidget {
                     onChanged: (value) {
                       _value = value;
                       if (_value) {
-                        GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+                        _GoSyncHomeState.of(
+                          context,
+                        )!.changeTheme(ThemeMode.dark);
                       } else {
-                        GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
+                        _GoSyncHomeState.of(
+                          context,
+                        )!.changeTheme(ThemeMode.light);
                       }
                     },
                   ),
@@ -147,9 +152,9 @@ class GoSyncNavDrawer extends StatelessWidget {
                 onChanged: (value) {
                   _value = value;
                   if (_value) {
-                    GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+                    _GoSyncHomeState.of(context)!.changeTheme(ThemeMode.dark);
                   } else {
-                    GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
+                    _GoSyncHomeState.of(context)!.changeTheme(ThemeMode.light);
                   }
                 },
               ),

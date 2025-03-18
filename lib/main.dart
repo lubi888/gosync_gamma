@@ -32,12 +32,18 @@ class GoSyncHome extends StatefulWidget {
   // static <_GoSyncHomeState>? of(BuildContext context) =>
   //  context.findAncestorStateOfType<_GoSyncHomeState>();
   // _GoSyncHomeState createState() => _GoSyncHomeState();
-  static _GoSyncHomeState? of(BuildContext context) =>
-      context.findAncestorStateOfType<_GoSyncHomeState>();
+
+  // ignore: library_private_types_in_public_api
+  // static _GoSyncHomeState? of(BuildContext context) =>
+  //     context.findAncestorStateOfType<_GoSyncHomeState>();
+
+  // static _GoSyncHomeState? of(BuildContext context) =>
+  //     context.findAncestorStateOfType<_GoSyncHomeState>();
+
   // notify listeners();
 
-  // static State<GoSyncHome>? of(BuildContext context) =>
-  //     context.findAncestorStateOfType<_GoSyncHomeState>();
+  static State<GoSyncHome>? of(BuildContext context) =>
+      context.findAncestorStateOfType<_GoSyncHomeState>();
 
   // static
   // static <GoSyncHomePage>? of(BuildContext)

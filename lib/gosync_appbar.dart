@@ -57,6 +57,7 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
   bool _value = false;
+  get _GoSyncHomeState => State<GoSyncHome>;
 
   @override
   Widget build(BuildContext context) {
@@ -170,9 +171,11 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
                         onChanged: (value) {
                           _value = value;
                           if (_value) {
-                            GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+                            _GoSyncHomeState.of(
+                              context,
+                            )!.changeTheme(ThemeMode.dark);
                           } else {
-                            GoSyncHome.of(
+                            _GoSyncHomeState.of(
                               context,
                             )!.changeTheme(ThemeMode.light);
                           }

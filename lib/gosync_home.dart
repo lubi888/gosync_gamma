@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './main.dart';
 import './gosync_navdrawer.dart';
 import './gosync_appbar.dart';
 import './gosync_scrollbar0.dart';

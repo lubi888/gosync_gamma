@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './main.dart';
-// import './gosync_home.dart';
+import './gosync_home.dart';
 import './gosync_navdrawer.dart';
 import './gosync_text.dart';
 
@@ -40,6 +40,7 @@ class GoSyncScrollbar0 extends StatefulWidget {
 class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
   // get _value => _value;
   bool _value = false;
+  get _GoSyncHomeState => State<GoSyncHome>;
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.03.13',
+              'Home \nInstall Golang Page 0 \n2025.03.18',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),
@@ -108,9 +109,15 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                       onChanged: (value) {
                         _value = value;
                         if (_value) {
-                          GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
+                          // State<GoSyncHome>.of(context)!.changeTheme(ThemeMode.dark);
+                          _GoSyncHomeState.of(
+                            context,
+                          )!.changeTheme(ThemeMode.dark);
+                          // GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
                         } else {
-                          GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
+                          _GoSyncHomeState.of(
+                            context,
+                          )!.changeTheme(ThemeMode.light);
                         }
                       },
                     ),
