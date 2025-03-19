@@ -31,11 +31,17 @@ const String _kAsset4 = 'assets/images/gethTerm.png';
 // class GoSyncNavDrawer extends StatelessWidget {
 //   GoSyncNavDrawer({super.key});
 
-class GoSyncNavDrawer extends StatelessWidget {
+class GoSyncNavDrawer extends StatefulWidget {
   GoSyncNavDrawer({super.key});
 
+  @override
+  State<GoSyncNavDrawer> createState() => _GoSyncNavDrawerState();
+}
+
+class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
   bool _value = false;
-  get _GoSyncHomeState => State<GoSyncHome>;
+
+  get GoSyncHomeState => State<GoSyncHome>;
 
   @override
   Widget build(BuildContext context) {
@@ -116,35 +122,35 @@ class GoSyncNavDrawer extends StatelessWidget {
                   child: SwitchListTile(
                     tileColor: Colors.red,
                     title: const Text('SwitchListTile with red background'),
-                    value: false,
+                    value: true,
                     onChanged: (bool? value) {},
                   ),
                 ),
               ),
-              ColoredBox(
-                color: Colors.deepOrangeAccent,
-                child: Material(
-                  child: SwitchListTile(
-                    tileColor: Colors.yellow,
-                    title: const Text('SwitchListTile theme selector'),
-                    // value: true,
-                    // onChanged: (bool? value) {},
-                    value: _value,
-                    onChanged: (value) {
-                      _value = value;
-                      if (_value) {
-                        _GoSyncHomeState.of(
-                          context,
-                        )!.changeTheme(ThemeMode.dark);
-                      } else {
-                        _GoSyncHomeState.of(
-                          context,
-                        )!.changeTheme(ThemeMode.light);
-                      }
-                    },
-                  ),
-                ),
-              ),
+              // ColoredBox(
+              //   color: Colors.deepOrangeAccent,
+              //   child: Material(
+              //     child: SwitchListTile(
+              //       tileColor: Colors.yellow,
+              //       title: const Text('SwitchListTile theme selector'),
+              //       // value: true,
+              //       // onChanged: (bool? value) {},
+              //       value: _value,
+              //       onChanged: (value) {
+              //         _value = value;
+              //         if (_value) {
+              //           _GoSyncHomeState.of(
+              //             context,
+              //           )!.changeTheme(ThemeMode.dark);
+              //         } else {
+              //           _GoSyncHomeState.of(
+              //             context,
+              //           )!.changeTheme(ThemeMode.light);
+              //         }
+              //       },
+              //     ),
+              //   ),
+              // ),
               SwitchListTile(
                 tileColor: Colors.deepOrange,
                 title: const Text('Theme selector'),
@@ -152,9 +158,10 @@ class GoSyncNavDrawer extends StatelessWidget {
                 onChanged: (value) {
                   _value = value;
                   if (_value) {
-                    _GoSyncHomeState.of(context)!.changeTheme(ThemeMode.dark);
+                    GoSyncHomeState.of(context)!.changeTheme(ThemeMode.dark);
+                    // _GoSyncHomeState.of(context)!.changeTheme(ThemeMode.dark);
                   } else {
-                    _GoSyncHomeState.of(context)!.changeTheme(ThemeMode.light);
+                    GoSyncHomeState.of(context)!.changeTheme(ThemeMode.light);
                   }
                 },
               ),
