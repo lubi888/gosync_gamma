@@ -115,51 +115,35 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   Navigator.pushNamed(context, '/');
                 },
               ),
-              // switch theme selection
-              ColoredBox(
-                color: Colors.green,
-                child: Material(
-                  child: SwitchListTile(
-                    tileColor: Colors.red,
-                    title: const Text('SwitchListTile with red background'),
-                    value: true,
-                    onChanged: (bool? value) {},
-                  ),
-                ),
-              ),
+              // switc tile theme select
               // ColoredBox(
-              //   color: Colors.deepOrangeAccent,
+              //   color: Colors.green,
               //   child: Material(
               //     child: SwitchListTile(
-              //       tileColor: Colors.yellow,
-              //       title: const Text('SwitchListTile theme selector'),
-              //       // value: true,
-              //       // onChanged: (bool? value) {},
-              //       value: _value,
-              //       onChanged: (value) {
-              //         _value = value;
-              //         if (_value) {
-              //           _GoSyncHomeState.of(
-              //             context,
-              //           )!.changeTheme(ThemeMode.dark);
-              //         } else {
-              //           _GoSyncHomeState.of(
-              //             context,
-              //           )!.changeTheme(ThemeMode.light);
-              //         }
-              //       },
+              //       tileColor: Colors.red,
+              //       title: const Text('SwitchListTile with red background'),
+              //       value: true,
+              //       onChanged: (bool? value) {},
               //     ),
               //   ),
               // ),
               SwitchListTile(
                 tileColor: Colors.deepOrange,
-                title: const Text('Theme selector'),
+                // leading: Icon(Icons.color_lens_outlined, color: Colors.yellow),
+                title: const Text('Theme Switch: Light or Dark'),
+                subtitle: const Text('Light or Dark'),
+                activeColor: Colors.yellowAccent,
+                inactiveThumbImage: AssetImage(_kAsset1),
+                activeThumbImage: AssetImage(_kAsset2),
+                // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
                 value: _value,
                 onChanged: (value) {
                   _value = value;
                   if (_value) {
                     GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
                     // _GoSyncHomeState.of(context)!.changeTheme(ThemeMode.dark);
+                    debugPrint('navdrawer theme switch dark [time]');
+                    print(TimeOfDay.now());
                   } else {
                     GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
                   }
