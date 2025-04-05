@@ -39,7 +39,7 @@ class GoSyncNavDrawer extends StatefulWidget {
 }
 
 class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
-  bool _value = false;
+  bool _themevalue = false;
 
   // get GoSyncHomeState => State<GoSyncHome>;
 
@@ -47,6 +47,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
   Widget build(BuildContext context) {
     debugPrint('navdrawer opened at [time]');
     print(TimeOfDay.now());
+    // debugPrint ('theme changed');
     // Scaffold.of(context).openDrawer();
     return Drawer(
       width: 400.0,
@@ -115,40 +116,33 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   Navigator.pushNamed(context, '/');
                 },
               ),
-              // switc tile theme select
-              // ColoredBox(
-              //   color: Colors.green,
-              //   child: Material(
-              //     child: SwitchListTile(
-              //       tileColor: Colors.red,
-              //       title: const Text('SwitchListTile with red background'),
-              //       value: true,
-              //       onChanged: (bool? value) {},
-              //     ),
-              //   ),
-              // ),
               SwitchListTile(
                 tileColor: Colors.deepOrange,
                 // leading: Icon(Icons.color_lens_outlined, color: Colors.yellow),
-                title: const Text('Theme Switch: Light or Dark'),
-                subtitle: const Text('Light or Dark'),
+                secondary: Icon(Icons.lightbulb_outline, color: Colors.yellow),
+                title: const Text(
+                  'theme switch: Day or Night',
+                  style: TextStyle(color: Colors.blue),
+                ),
+                subtitle: const Text(
+                  'light or dark',
+                  style: TextStyle(color: Colors.lightGreenAccent),
+                ),
                 activeColor: Colors.yellowAccent,
                 inactiveThumbImage: AssetImage(_kAsset1),
                 activeThumbImage: AssetImage(_kAsset2),
                 // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
-                value: _value,
+                value: _themevalue,
                 onChanged: (value) {
-                  _value = value;
-                  if (_value) {
+                  _themevalue = value;
+                  if (_themevalue) {
                     GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
-                    // _GoSyncHomeState.of(context)!.changeTheme(ThemeMode.dark);
-                    debugPrint('navdrawer theme switch dark [time]');
-                    print(TimeOfDay.now());
                   } else {
                     GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
                   }
                 },
               ),
+              // theme selection beta triline.
               const ListTile(
                 isThreeLine: true,
                 leading: Icon(Icons.color_lens_outlined, color: Colors.yellow),
@@ -161,28 +155,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   style: TextStyle(color: Colors.blue),
                 ),
                 trailing: Icon(Icons.colorize, color: Colors.green),
-              ),
-              // working listtile
-              ListTile(
-                leading: const Icon(
-                  Icons.color_lens_outlined,
-                  color: Colors.yellow,
-                ),
-                title: const Text(
-                  'theme selection',
-                  style: TextStyle(color: Colors.red),
-                ),
-                trailing: const Icon(Icons.colorize, color: Colors.green),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder:
-                          (BuildContext context) => const GoSyncScrollbar2(),
-                    ),
-                    // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                  );
-                },
               ),
               ListTile(
                 leading: const Icon(Icons.bug_report, color: Colors.orange),
@@ -212,18 +184,11 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.yellowAccent,
                 ),
                 onTap: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //       builder: (context) => const GoSyncScrollbar2()),
-                  //   // MaterialPageRoute(builder: (context) => EthSyncShare()),
-                  // );
                   Share.share(
                     'check out my website https://gosync.com',
                     subject:
                         'Look what I found! golang language assist app gosync.com',
                   );
-                  // _launchJetbrainsGoLand();
                 },
               ),
               ListTile(

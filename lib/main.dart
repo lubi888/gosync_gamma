@@ -72,12 +72,9 @@ class _GoSyncHomeState extends State<GoSyncHome> {
   void changeTheme(ThemeMode themeMode) {
     setState(() {
       _themeMode = themeMode;
+      debugPrint ('theme changed to $_themeMode');
     });
   }
-  // final ThemeMode _themeMode = ThemeMode.dark;
-  // themeMode: ThemeMode.light,
-  // themeMode: ThemeMode.dark,
-  // themeMode: ThemeMode.system,
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +86,6 @@ class _GoSyncHomeState extends State<GoSyncHome> {
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.orange,
           brightness: Brightness.light,
-          // colorSchemeSeed: const Color.fromRGBO(86, 80, 14, 171),
         ),
         textTheme: TextTheme(
           displayLarge: const TextStyle(
@@ -104,7 +100,22 @@ class _GoSyncHomeState extends State<GoSyncHome> {
           displaySmall: GoogleFonts.pacifico(),
         ),
       ),
-      darkTheme: ThemeData(useMaterial3: true, brightness: Brightness.dark),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        textTheme: TextTheme(
+          displayLarge: const TextStyle(
+            fontSize: 72,
+            fontWeight: FontWeight.bold,
+          ),
+          titleLarge: GoogleFonts.oswald(
+            fontSize: 30,
+            fontStyle: FontStyle.italic,
+          ),
+          bodyMedium: GoogleFonts.merriweather(),
+          displaySmall: GoogleFonts.pacifico(),
+        ),
+      ),
       themeMode: _themeMode,
       initialRoute: '/',
       routes: {
@@ -142,11 +153,5 @@ class _GoSyncHomeState extends State<GoSyncHome> {
         child: GoSyncHomePage(title: goSyncTitle),
       ),
     );
-    //   floatingActionButton: FloatingActionButton(
-    //     onPressed: _incrementCounter,
-    //     tooltip: 'Increment',
-    //     child: const Icon(Icons.add),
-    //   ), // This trailing comma makes auto-formatting nicer for build methods.
-    // );
   }
 }
