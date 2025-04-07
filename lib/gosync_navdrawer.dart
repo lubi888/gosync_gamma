@@ -3,13 +3,12 @@ import 'package:url_launcher/url_launcher.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
-// import './mainStatlessState.dart';
 import './main.dart';
-import './gosync_home.dart';
+// import './gosync_home.dart';
 // import './gosync_appbar.dart';
 // import './gosync_scrollbar0.dart';
 // import './gosync_scrollbar1.dart';
-import './gosync_scrollbar2.dart';
+// import './gosync_scrollbar2.dart';
 // import './gosync_text.dart';
 
 // import 'package:json_theme/json_theme.dart';
@@ -32,7 +31,7 @@ const String _kAsset4 = 'assets/images/gethTerm.png';
 //   GoSyncNavDrawer({super.key});
 
 class GoSyncNavDrawer extends StatefulWidget {
-  GoSyncNavDrawer({super.key});
+  const GoSyncNavDrawer({super.key});
 
   @override
   State<GoSyncNavDrawer> createState() => _GoSyncNavDrawerState();

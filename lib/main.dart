@@ -13,7 +13,7 @@ import './gosync_text.dart';
 import './gosync_scrollbar0.dart';
 import './gosync_scrollbar1.dart';
 import './gosync_scrollbar2.dart';
-// import './gosync_windows_install.dart';
+import './gosync_windows_install.dart';
 // import './gosync_apple_install.dart';
 // import './gosync_linux_install.dart';
 // import './gosync_uninstall.dart';
@@ -72,7 +72,7 @@ class _GoSyncHomeState extends State<GoSyncHome> {
   void changeTheme(ThemeMode themeMode) {
     setState(() {
       _themeMode = themeMode;
-      debugPrint ('theme changed to $_themeMode');
+      // debugPrint('theme changed to $_themeMode');
     });
   }
 
@@ -127,8 +127,8 @@ class _GoSyncHomeState extends State<GoSyncHome> {
         '/scrollbar1': (BuildContext context) => const GoSyncScrollbar1(),
         '/scrollbar2': (BuildContext context) => const GoSyncScrollbar2(),
         '/navdrawer': (BuildContext context) => GoSyncNavDrawer(),
-        // '/windowsInstall':
-        //     (BuildContext context) => const GoSyncWindowsInstall(),
+        '/windowsInstall':
+            (BuildContext context) => const GoSyncWindowsInstall(),
         // '/appleInstall': (BuildContext context) => const GoSyncAppleInstall(),
         // '/linuxInstall': (BuildContext context) => const GoSyncLinuxInstall(),
         // '/uninstall': (BuildContext context) => const GoSyncUninstall(),
