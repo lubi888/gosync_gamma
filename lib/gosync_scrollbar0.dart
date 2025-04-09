@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import './main.dart';
-import './gosync_home.dart';
+// import './gosync_home.dart';
 import './gosync_navdrawer.dart';
 import './gosync_text.dart';
 
@@ -68,7 +68,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.04.07',
+              'Home \nInstall Golang Page 0 \n2025.04.09',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),
@@ -1121,7 +1121,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     ),
                   ),
                   trailing: const Icon(
-                    FontAwesomeIcons.instagramSquare,
+                    FontAwesomeIcons.instagram,
                     color: Colors.orange,
                   ),
                   onTap: () {
@@ -1129,7 +1129,6 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     _launchYouTube();
                   },
                 ),
-
                 ListTile(
                   leading: const Icon(
                     FontAwesomeIcons.wikipediaW,

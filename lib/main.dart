@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 // for root bundle
 // import 'package:json_theme/json_theme.dart';
 // import 'dart:convert'; // json decode
-// import './gosync_about.dart';
+import './gosync_about.dart';
 import './gosync_appbar.dart';
 import './gosync_navdrawer.dart';
 import './gosync_home.dart';
@@ -79,7 +79,7 @@ class _GoSyncHomeState extends State<GoSyncHome> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //webpage tab title
+      //webpage tab title not visible on mobile app
       title: goSyncTitle2,
       theme: ThemeData(
         useMaterial3: true,
@@ -122,7 +122,7 @@ class _GoSyncHomeState extends State<GoSyncHome> {
         '/home':
             (BuildContext context) => const GoSyncHomePage(title: goSyncTitle),
         '/appbar': (BuildContext context) => GoSyncAppBar(),
-        // '/about': (BuildContext context) => const GoSyncAbout(),
+        '/about': (BuildContext context) => const GoSyncAbout(),
         '/scrollbar0': (BuildContext context) => GoSyncScrollbar0(),
         '/scrollbar1': (BuildContext context) => const GoSyncScrollbar1(),
         '/scrollbar2': (BuildContext context) => const GoSyncScrollbar2(),
