@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import './l10n/app_localizations.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:url_launcher/url_launcher.dart';
 import './main.dart';
-import './gosync_text.dart';
+// import './gosync_text.dart';
 // import './gosync_text.dart';
 
 // import './gosync_text.dart';
@@ -75,8 +76,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         // goSyncTitle,
         // "title is today",
-        goSyncTitle,
-        // AppLocalizations.of(context)!.title,
+        // goSyncTitle,
+        AppLocalizations.of(context)!.titledate,
         textAlign: TextAlign.center,
         style: const TextStyle(
           // backgroundColor: Color.fromARGB(255, 207, 160, 17),
@@ -99,8 +100,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
               alignment: Alignment.center,
               child: Text(
                 // home
-                "home1",
-                // AppLocalizations.of(context)!.golangInstall
+                // "home1",
+                AppLocalizations.of(context)!.golangInstall,
               ),
             ),
           ),
@@ -113,8 +114,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Align(
               alignment: Alignment.center,
               child: Text(
-                "home2",
-                // AppLocalizations.of(context)!.title
+                // "home2",
+                AppLocalizations.of(context)!.title,
               ),
               // install golang and geth
             ),
@@ -127,8 +128,8 @@ class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Align(
               alignment: Alignment.center,
               child: Text(
-                "hom3",
-                // AppLocalizations.of(context)!.danger
+                // "hom3",
+                AppLocalizations.of(context)!.danger,
               ),
             ),
           ),
