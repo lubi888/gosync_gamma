@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import './l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
 import './main.dart';
@@ -204,10 +205,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.orangeAccent,
                 ),
                 onTap: () {
-                  // Navigator.of(context).push(
-                  //   MaterialPageRoute(
-                  //       builder: (context) => const GoSyncAbout()),
-                  // );
                   Navigator.pushNamed(context, '/about');
                 },
               ),
@@ -348,9 +345,118 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.pink,
                 ),
                 onTap: () {
+                  Navigator.pushNamed(context, '/unInstall');
+                },
+              ),
+            ],
+          ),
+          ExpansionTile(
+            initiallyExpanded: true,
+            title: const Text(
+              "go installation levels",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.yellow),
+            ),
+            // leading: Icon(Icons.person), //add icon
+            leading: const Icon(
+              Icons.school,
+              // FontAwesomeIcons.googleScholar,
+              color: Colors.red,
+            ),
+            childrenPadding: const EdgeInsets.only(
+              left: 20,
+            ), //children padding origianlly 60
+            children: [
+              // Divider(color: Colors.grey.shade400, indent: 72.0, height: 1.0),
+              ListTile(
+                leading: const Icon(
+                  // Icons.tv,
+                  FontAwesomeIcons.windows,
+                  color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'windows basic go install using gorretct directory structure && setting environment variables.',
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.yellow),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'windows go install windows basic go install using gorretct directory structure && setting environment variables.golang',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.green,
+                  ),
+                ),
+                // isThreeLine: true,
+                trailing: const Icon(
+                  FontAwesomeIcons.windows,
+                  color: Colors.lightGreen,
+                ),
+                onTap: () {
                   // Navigator.of(context).pop();
                   // _launchYouTube();
-                  Navigator.pushNamed(context, '/unInstall');
+                  Navigator.pushNamed(context, '/install_primary');
+                },
+              ),
+              ListTile(
+                leading: const Icon(FontAwesomeIcons.apple, color: Colors.grey),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'container Install & collaborative goup coding',
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.lightBlue),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'docker & kubernetes container go production & github hookup ',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.yellow,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.apple,
+                  color: Colors.blueGrey,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  // _launchYouTube();
+                  Navigator.pushNamed(context, '/install_secondary');
+                },
+              ),
+              // list tile 5 deep link youtube
+              ListTile(
+                leading: const Icon(
+                  // Icons.tv,
+                  FontAwesomeIcons.linux,
+                  color: Colors.red,
+                ),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'go pro. production professional environment',
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.lightBlue),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'professional go production environment',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.yellow,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.linux,
+                  color: Colors.blue,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  // _launchYouTube();
+                  Navigator.pushNamed(context, '/install_tertiary');
                 },
               ),
             ],
@@ -425,8 +531,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.green,
                 ),
                 onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
                   _launchPkgGoDevGo();
                 },
               ),
@@ -456,8 +560,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.green,
                 ),
                 onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
                   _launchGoEnv();
                 },
               ),
@@ -498,10 +600,10 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   FontAwesomeIcons.code,
                   color: Colors.pink,
                 ),
-                title: const Text(
+                title: Text(
                   // 'add eth|etc address - acccount',
-                  'go build',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  // 'go build',
+                  AppLocalizations.of(context)!.visitGoDevPlay,
                   style: TextStyle(color: Colors.teal),
                 ),
                 subtitle: const Text(
@@ -529,10 +631,10 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   FontAwesomeIcons.code,
                   color: Colors.pink,
                 ),
-                title: const Text(
+                title: Text(
                   // 'add eth|etc address - acccount',
-                  'go run',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  // 'go run',
+                  AppLocalizations.of(context)!.visitGoDevPlay,
                   style: TextStyle(color: Colors.teal),
                 ),
                 subtitle: const Text(
@@ -549,129 +651,12 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.green,
                 ),
                 onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
                   _launchGoRun();
                 },
               ),
             ],
           ),
           // expansion tile install levels
-          ExpansionTile(
-            initiallyExpanded: true,
-            title: const Text(
-              "go installation levels",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.yellow),
-            ),
-            // leading: Icon(Icons.person), //add icon
-            leading: const Icon(
-              Icons.school,
-              // FontAwesomeIcons.googleScholar,
-              color: Colors.red,
-            ),
-            childrenPadding: const EdgeInsets.only(
-              left: 20,
-            ), //children padding origianlly 60
-            children: [
-              // Divider(color: Colors.grey.shade400, indent: 72.0, height: 1.0),
-              ListTile(
-                leading: const Icon(
-                  // Icons.tv,
-                  FontAwesomeIcons.windows,
-                  color: Colors.lightBlue,
-                ),
-                title: const Text(
-                  // 'add eth|etc address - acccount',
-                  'windows basic go install using gorretct directory structure && setting environment variables.',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
-                  style: TextStyle(color: Colors.yellow),
-                ),
-                subtitle: const Text(
-                  // 'https://play.golang.com/',
-                  'windows go install windows basic go install using gorretct directory structure && setting environment variables.golang',
-                  // https://go.dev/play/
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.green,
-                  ),
-                ),
-                // isThreeLine: true,
-                trailing: const Icon(
-                  FontAwesomeIcons.windows,
-                  color: Colors.lightGreen,
-                ),
-                onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
-                  Navigator.pushNamed(context, '/install_primary');
-                },
-              ),
-              ListTile(
-                leading: const Icon(
-                  // Icons.tv,
-                  FontAwesomeIcons.apple,
-                  color: Colors.grey,
-                ),
-                title: const Text(
-                  // 'add eth|etc address - acccount',
-                  'container Install & collaborative goup coding',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
-                  style: TextStyle(color: Colors.lightBlue),
-                ),
-                subtitle: const Text(
-                  // 'https://play.golang.com/',
-                  'docker & kubernetes container go production & github hookup ',
-                  // https://go.dev/play/
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.yellow,
-                  ),
-                ),
-                trailing: const Icon(
-                  FontAwesomeIcons.apple,
-                  color: Colors.blueGrey,
-                ),
-                onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
-                  Navigator.pushNamed(context, '/install_secondary');
-                },
-              ),
-              // list tile 5 deep link youtube
-              ListTile(
-                leading: const Icon(
-                  // Icons.tv,
-                  FontAwesomeIcons.linux,
-                  color: Colors.red,
-                ),
-                title: const Text(
-                  // 'add eth|etc address - acccount',
-                  'go pro. production professional environment',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
-                  style: TextStyle(color: Colors.lightBlue),
-                ),
-                subtitle: const Text(
-                  // 'https://play.golang.com/',
-                  'professional go production environment',
-                  // https://go.dev/play/
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.yellow,
-                  ),
-                ),
-                trailing: const Icon(
-                  FontAwesomeIcons.linux,
-                  color: Colors.blue,
-                ),
-                onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
-                  Navigator.pushNamed(context, '/install_tertiary');
-                },
-              ),
-            ],
-          ),
           ExpansionTile(
             initiallyExpanded: true,
             title: const Text(
@@ -689,7 +674,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
               left: 20,
             ), //children padding origianlly 60
             children: [
-              // Divider(color: Colors.grey.shade400, indent: 72.0, height: 1.0),
               ListTile(
                 leading: const Icon(
                   // Icons.tv,
@@ -1053,8 +1037,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   style: TextStyle(color: Colors.green),
                 ),
                 subtitle: const Text(
-                  // 'https://play.golang.com/',
-                  // 'latest release notes from [date] release [num]',
                   'go is updated twice yearly with minor bug fixes about 1 month after a major release',
                   style: TextStyle(
                     // fontStyle: FontStyle.italic,

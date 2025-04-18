@@ -19,6 +19,9 @@ import './gosync_windows_install.dart';
 import './gosync_apple_install.dart';
 import './gosync_linux_install.dart';
 import './gosync_uninstall.dart';
+import './gosync_install_primary.dart';
+import './gosync_install_secondary.dart';
+import './gosync_install_tertiary.dart';
 
 void main() {
   runApp(const GoSyncHome(title: goSyncTitle));
@@ -70,7 +73,7 @@ class _GoSyncHomeState extends State<GoSyncHome> {
   // }
   // static <GoSyncHomePage>? of(BuildContext context) => context.findAncestorStateOfType<_GoSyncHomePageState>();
 
-  ThemeMode _themeMode = ThemeMode.light;
+  ThemeMode _themeMode = ThemeMode.dark;
   void changeTheme(ThemeMode themeMode) {
     setState(() {
       _themeMode = themeMode;
@@ -134,6 +137,12 @@ class _GoSyncHomeState extends State<GoSyncHome> {
         '/appleInstall': (BuildContext context) => const GoSyncAppleInstall(),
         '/linuxInstall': (BuildContext context) => const GoSyncLinuxInstall(),
         '/uninstall': (BuildContext context) => const GoSyncUninstall(),
+        '/install_primary':
+            (BuildContext context) => const GoSyncInstallPrimary(),
+        '/install_secondary':
+            (BuildContext context) => const GoSyncInstallSecondary(),
+        '/install_tertiary':
+            (BuildContext context) => const GoSyncInstallTertiary(),
       },
       localizationsDelegates: [
         AppLocalizations.delegate,
