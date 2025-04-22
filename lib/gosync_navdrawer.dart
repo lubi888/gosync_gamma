@@ -345,7 +345,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.pink,
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, '/unInstall');
+                  Navigator.pushNamed(context, '/uninstall');
                 },
               ),
             ],
