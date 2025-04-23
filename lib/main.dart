@@ -86,6 +86,7 @@ class _GoSyncHomeState extends State<GoSyncHome> {
     return MaterialApp(
       //webpage tab title not visible on mobile app
       title: goSyncTitle2,
+      // title: AppLocalizations.of(context)!.title2,
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(

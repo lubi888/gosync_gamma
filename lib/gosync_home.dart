@@ -30,12 +30,12 @@ class _GoSyncHomePageState extends State<GoSyncHomePage> {
           GoSyncScrollbar2(),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        // onPressed: _incrementCounter,
-        onPressed: null,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // floatingActionButton: FloatingActionButton(
+      //   // onPressed: _incrementCounter,
+      //   onPressed: null,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

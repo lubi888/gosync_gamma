@@ -9,10 +9,13 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get titledate => 'goSync250422';
+  String get titledate => 'goSync250423';
 
   @override
   String get title => 'goSync';
+
+  @override
+  String get title2 => 'goSync title2';
 
   @override
   String get helloWorld => 'hello flutter eng';

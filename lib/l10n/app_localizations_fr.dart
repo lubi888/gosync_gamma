@@ -9,10 +9,13 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get titledate => 'goSync250422';
+  String get titledate => 'goSync250423';
 
   @override
   String get title => 'gosync.go francais 2024.04.03';
+
+  @override
+  String get title2 => 'goSync title2';
 
   @override
   String get helloWorld => 'bonjour mec flutter francais';

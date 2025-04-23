@@ -1,11 +1,15 @@
 {
-  "titledate": "goSync250422",
+  "titledate": "goSync250423",
   "@titledate": {
     "description": "The conventional newborn programmer greeting"
   },
   "title": "goSync",
   "@title": {
     "description": "The conventional newborn programmer greeting"
+  },
+  "title2": "goSync title2",
+  "@title2": {
+    "description": "title 2"
   },
   "helloWorld": "hello flutter eng",
   "@helloWorld": {
