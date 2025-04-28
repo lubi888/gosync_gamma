@@ -38,9 +38,7 @@ class GoSyncScrollbar0 extends StatefulWidget {
 }
 
 class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
-  // get _value => _value;
   bool _value = false;
-  // get _GoSyncHomeState => State<GoSyncHome>;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +66,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.04.23',
+              'Home \nInstall Golang Page 0 \n2025.04.28',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),
@@ -109,15 +107,8 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                       onChanged: (value) {
                         _value = value;
                         if (_value) {
-                          // State<GoSyncHome>.of(context)!.changeTheme(ThemeMode.dark);
-                          // _GoSyncHomeState.of(
-                          //   context,
-                          // )!.changeTheme(ThemeMode.dark);
                           GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
                         } else {
-                          // _GoSyncHomeState.of(
-                          //   context,
-                          // )!.changeTheme(ThemeMode.light);
                           GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
                         }
                       },
@@ -150,8 +141,6 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     color: Colors.lightGreen,
                   ),
                   onTap: () {
-                    // Navigator.of(context).pop();
-                    // _launchYouTube();
                     Navigator.pushNamed(context, '/windowsInstall');
                   },
                 ),
@@ -182,15 +171,12 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     color: Colors.blueGrey,
                   ),
                   onTap: () {
-                    // Navigator.of(context).pop();
-                    // _launchYouTube();
                     Navigator.pushNamed(context, '/appleInstall');
                   },
                 ),
                 // list tile 5 deep link youtube
                 ListTile(
                   leading: const Icon(
-                    // Icons.tv,
                     FontAwesomeIcons.linux,
                     color: Colors.red,
                   ),
