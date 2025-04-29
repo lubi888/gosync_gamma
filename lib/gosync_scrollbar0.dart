@@ -38,7 +38,7 @@ class GoSyncScrollbar0 extends StatefulWidget {
 }
 
 class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
-  bool _value = false;
+  bool _value = true;
 
   @override
   Widget build(BuildContext context) {
@@ -284,8 +284,6 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     _launchGoCommands();
                   },
                 ),
-                // list tile 5 deep link XTwitter
-                // list tile 5 deep link youtube
               ],
             ),
             // expansion tile install levels

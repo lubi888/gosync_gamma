@@ -39,9 +39,7 @@ class GoSyncNavDrawer extends StatefulWidget {
 }
 
 class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
-  bool _themevalue = false;
-
-  // get GoSyncHomeState => State<GoSyncHome>;
+  bool _themevalue = true;
 
   @override
   Widget build(BuildContext context) {

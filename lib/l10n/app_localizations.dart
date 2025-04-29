@@ -100,7 +100,7 @@ abstract class AppLocalizations {
   /// The conventional newborn programmer greeting
   ///
   /// In en, this message translates to:
-  /// **'goSync250428'**
+  /// **'goSync250429'**
   String get titledate;
 
   /// The conventional newborn programmer greeting
