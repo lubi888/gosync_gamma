@@ -66,7 +66,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.04.28',
+              'Home \nInstall Golang Page 0 \n2025.05.08',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),
@@ -260,15 +260,11 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     color: Colors.pink,
                   ),
                   title: const Text(
-                    // 'add eth|etc address - acccount',
                     'go cli common commands',
-                    // AppLocalizations.of(context)!.visitGoDevPlay,
                     style: TextStyle(color: Colors.teal),
                   ),
                   subtitle: const Text(
-                    // 'https://play.golang.com/',
                     'cli command line interface',
-                    // https://go.dev/play/
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
                       color: Colors.pink,
@@ -279,8 +275,6 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     color: Colors.green,
                   ),
                   onTap: () {
-                    // Navigator.of(context).pop();
-                    // _launchYouTube();
                     _launchGoCommands();
                   },
                 ),
@@ -332,8 +326,6 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
                     color: Colors.lightGreen,
                   ),
                   onTap: () {
-                    // Navigator.of(context).pop();
-                    // _launchYouTube();
                     Navigator.pushNamed(context, '/install_primary');
                   },
                 ),

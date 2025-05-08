@@ -116,7 +116,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
               ),
               SwitchListTile(
                 tileColor: Colors.deepOrange,
-                // leading: Icon(Icons.color_lens_outlined, color: Colors.yellow),
                 secondary: Icon(Icons.lightbulb_outline, color: Colors.yellow),
                 title: const Text(
                   'theme switch: Day or Night',
@@ -195,7 +194,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.greenAccent,
                 ),
                 title: const Text(
-                  'about this app',
+                  'about this app & thanks to contributors',
                   style: TextStyle(color: Colors.yellowAccent),
                 ),
                 trailing: const Icon(

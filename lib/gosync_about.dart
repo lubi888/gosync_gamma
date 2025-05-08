@@ -18,7 +18,7 @@ class GoSyncAbout extends StatelessWidget {
         leading: Builder(
           builder: (context) {
             return IconButton(
-              icon: const Icon(Icons.menu),
+              icon: const Icon(Icons.handyman_outlined),
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
@@ -42,7 +42,7 @@ class GoSyncAbout extends StatelessWidget {
                 '\nCheck out our website www.GoSync.com.'
                 '\nEmail us at bugs@gosync.com.'
                 '\nVersion 0.1.0'
-                '\nLast update 07.2024',
+                '\nLast update 05.2025',
             textAlign: TextAlign.center,
             style: GoogleFonts.allura(
               textStyle: Theme.of(context).textTheme.headlineMedium,
