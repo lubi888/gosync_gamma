@@ -13,8 +13,6 @@ import './main.dart';
 // //   // the App.build method, and use it to set our appbar title.
 // //   title: Text(widget.title)
 const double kToolbarHeight = 155.0;
-const String _kAsset1 = 'assets/images/golang_developers.png';
-const String _kAsset2 = 'assets/images/_kAsset32.png';
 var myMenuItems = <String>[
   'Home',
   'Profile',
@@ -54,24 +52,14 @@ var myMenuItems = <String>[
 //   @override
 //   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
-class GoSyncAppBar extends StatefulWidget implements PreferredSizeWidget {
+class GoSyncAppBar extends StatelessWidget implements PreferredSizeWidget {
   GoSyncAppBar({super.key});
 
   @override
-  State<GoSyncAppBar> createState() => _GoSyncAppBarState();
-
-  @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-  // throw UnimplementedError();
-}
-
-class _GoSyncAppBarState extends State<GoSyncAppBar> {
-  // Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-  bool _themevalue = true;
   bool _value = true;
-
   // get _GoSyncHomeState => State<GoSyncHome>;
+
   @override
   Widget build(BuildContext context) {
     () => Scaffold.of(context).openDrawer();
@@ -177,43 +165,13 @@ class _GoSyncAppBarState extends State<GoSyncAppBar> {
                   child: ColoredBox(
                     color: Colors.blue,
                     child: Material(
-                      // child: SwitchListTile(
-                      //   tileColor: Colors.yellowAccent,
-                      //   title: const Text('theme switcher'),
-                      //   value: _value,
-                      //   onChanged: (value) {
-                      //     _value = value;
-                      //     if (_value) {
-                      //       GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
-                      //     } else {
-                      //       GoSyncHome.of(
-                      //         context,
-                      //       )!.changeTheme(ThemeMode.light);
-                      //     }
-                      //   },
-                      // ),
                       child: SwitchListTile(
-                        tileColor: Colors.deepOrange,
-                        secondary: Icon(
-                          Icons.lightbulb_outline,
-                          color: Colors.yellow,
-                        ),
-                        title: const Text(
-                          'theme switch: Day or Night',
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                        subtitle: const Text(
-                          'light or dark',
-                          style: TextStyle(color: Colors.lightGreenAccent),
-                        ),
-                        activeColor: Colors.yellowAccent,
-                        inactiveThumbImage: AssetImage(_kAsset1),
-                        activeThumbImage: AssetImage(_kAsset2),
-                        // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
-                        value: _themevalue,
+                        tileColor: Colors.yellowAccent,
+                        title: const Text('theme switcher'),
+                        value: _value,
                         onChanged: (value) {
-                          _themevalue = value;
-                          if (_themevalue) {
+                          _value = value;
+                          if (_value) {
                             GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
                           } else {
                             GoSyncHome.of(
@@ -225,67 +183,6 @@ class _GoSyncAppBarState extends State<GoSyncAppBar> {
                     ),
                   ),
                 ),
-                PopupMenuItem(
-                  child: StatefulBuilder(
-                    builder: (context, setState) {
-                      return SwitchListTile(
-                        tileColor: Colors.deepOrange,
-                        secondary: Icon(
-                          Icons.lightbulb_outline,
-                          color: Colors.yellow,
-                        ),
-                        title: const Text(
-                          'theme switch: Day or Night',
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                        subtitle: const Text(
-                          'light or dark',
-                          style: TextStyle(color: Colors.lightGreenAccent),
-                        ),
-                        activeColor: Colors.yellowAccent,
-                        inactiveThumbImage: AssetImage(_kAsset1),
-                        activeThumbImage: AssetImage(_kAsset2),
-                        // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
-                        value: _themevalue,
-                        onChanged: (value) {
-                          _themevalue = value;
-                          if (_themevalue) {
-                            GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
-                          } else {
-                            GoSyncHome.of(
-                              context,
-                            )!.changeTheme(ThemeMode.light);
-                          }
-                        },
-                      );
-                    },
-                  ),
-                ), // PopupMenuTheme(data: data, child: child)
-                // SwitchListTile(
-                //   tileColor: Colors.deepOrange,
-                //   secondary: Icon(Icons.lightbulb_outline, color: Colors.yellow),
-                //   title: const Text(
-                //     'theme switch: Day or Night',
-                //     style: TextStyle(color: Colors.blue),
-                //   ),
-                //   subtitle: const Text(
-                //     'light or dark',
-                //     style: TextStyle(color: Colors.lightGreenAccent),
-                //   ),
-                //   activeColor: Colors.yellowAccent,
-                //   inactiveThumbImage: AssetImage(_kAsset1),
-                //   activeThumbImage: AssetImage(_kAsset2),
-                //   // inactiveThumbImage: Icons(Icons.color_lens_outlined, Colors.yellowAccent),
-                //   value: _themevalue,
-                //   onChanged: (value) {
-                //     _themevalue = value;
-                //     if (_themevalue) {
-                //       GoSyncHome.of(context)!.changeTheme(ThemeMode.dark);
-                //     } else {
-                //       GoSyncHome.of(context)!.changeTheme(ThemeMode.light);
-                //     }
-                //   },
-                // ),
                 PopupMenuItem(
                   child: Linkify(
                     onOpen: (link) async {
@@ -375,4 +272,6 @@ class _GoSyncAppBarState extends State<GoSyncAppBar> {
       ],
     );
   }
+
+  // Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
