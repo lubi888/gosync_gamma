@@ -207,142 +207,49 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
               ),
             ],
           ),
-          // expansion tile platform installation
           ExpansionTile(
             initiallyExpanded: true,
             title: const Text(
-              "platform installation",
+              "tiobe index",
               textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.blue),
+              style: TextStyle(color: Colors.blueAccent),
             ),
             leading: const Icon(
-              FontAwesomeIcons.computer,
-              color: Colors.green,
+              // FontAwesomeIcons.google,
+              Icons.code_outlined,
+              color: Colors.deepPurpleAccent,
             ), //add icon
             childrenPadding: const EdgeInsets.only(left: 30), //children padding
             children: [
               ListTile(
                 leading: const Icon(
                   // Icons.tv,
-                  FontAwesomeIcons.windows,
-                  color: Colors.lightBlue,
-                ),
-                title: const Text(
-                  // 'add eth|etc address - acccount',
-                  'windows platform golang',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
-                  style: TextStyle(color: Colors.lightBlue),
-                ),
-                subtitle: const Text(
-                  // 'https://play.golang.com/',
-                  'windows go install',
-                  // https://go.dev/play/
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.yellow,
-                  ),
-                ),
-                trailing: const Icon(
-                  FontAwesomeIcons.windows,
-                  color: Colors.lightGreen,
-                ),
-                onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
-                  Navigator.pushNamed(context, '/windowsInstall');
-                },
-              ),
-              // list tile 5 deep link youtube
-              ListTile(
-                leading: const Icon(
-                  // Icons.tv,
-                  FontAwesomeIcons.apple,
-                  color: Colors.grey,
-                ),
-                title: const Text(
-                  // 'add eth|etc address - acccount',
-                  'visit Apple iOS',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
-                  style: TextStyle(color: Colors.lightBlue),
-                ),
-                subtitle: const Text(
-                  // 'https://play.golang.com/',
-                  'apple programming',
-                  // https://go.dev/play/
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.yellow,
-                  ),
-                ),
-                trailing: const Icon(
-                  FontAwesomeIcons.apple,
-                  color: Colors.blueGrey,
-                ),
-                onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
-                  Navigator.pushNamed(context, '/appleInstall');
-                },
-              ),
-              // list tile 5 deep link youtube
-              ListTile(
-                leading: const Icon(
-                  // Icons.tv,
-                  FontAwesomeIcons.linux,
-                  color: Colors.red,
-                ),
-                title: const Text(
-                  // 'add eth|etc address - acccount',
-                  'visit Linux golang install',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
-                  style: TextStyle(color: Colors.lightBlue),
-                ),
-                subtitle: const Text(
-                  // 'https://play.golang.com/',
-                  'deep link linux',
-                  // https://go.dev/play/
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.yellow,
-                  ),
-                ),
-                trailing: const Icon(
-                  FontAwesomeIcons.linux,
+                  FontAwesomeIcons.google,
                   color: Colors.blue,
                 ),
-                onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
-                  Navigator.pushNamed(context, '/linuxInstall');
-                },
-              ),
-              ListTile(
-                leading: const Icon(
-                  // Icons.tv,
-                  FontAwesomeIcons.trash,
-                  color: Colors.yellow,
-                ),
                 title: const Text(
                   // 'add eth|etc address - acccount',
-                  'uninstall',
+                  'tiobe index of top programming lanugages',
                   // AppLocalizations.of(context)!.visitGoDevPlay,
-                  style: TextStyle(color: Colors.lightBlue),
+                  style: TextStyle(color: Colors.teal),
                 ),
                 subtitle: const Text(
                   // 'https://play.golang.com/',
-                  'multiple versions and uninstall directions',
+                  'go currently number 7',
                   // https://go.dev/play/
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
-                    color: Colors.purple,
+                    color: Colors.pink,
                   ),
                 ),
                 trailing: const Icon(
-                  FontAwesomeIcons.trashCan,
-                  color: Colors.pink,
+                  FontAwesomeIcons.golang,
+                  color: Colors.green,
                 ),
                 onTap: () {
-                  Navigator.pushNamed(context, '/uninstall');
+                  // Navigator.of(context).pop();
+                  // _launchYouTube();
+                  _launchGoTiobe();
                 },
               ),
             ],
@@ -3139,6 +3046,17 @@ Future<void> _launchGoogleCloudGo() async {
   print(TimeOfDay.now());
   if (!await launchUrl(_urlGoogleCloudGo)) {
     throw Exception('Could not launch $_urlGoogleCloudGo');
+  }
+}
+
+// _launchGoTiobe
+final Uri _urlGoTiobe = Uri.parse('https://www.tiobe.com/tiobe-index/go/');
+
+Future<void> _launchGoTiobe() async {
+  debugPrint("customer left app to Hostinger");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoTiobe)) {
+    throw Exception('Could not launch $_urlGoTiobe');
   }
 }
 
