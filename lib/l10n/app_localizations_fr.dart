@@ -9,7 +9,7 @@ class AppLocalizationsFr extends AppLocalizations {
   AppLocalizationsFr([String locale = 'fr']) : super(locale);
 
   @override
-  String get titledate => 'goSync250602';
+  String get titledate => 'goSync250623';
 
   @override
   String get title => 'gosync.go francais 2024.04.03';

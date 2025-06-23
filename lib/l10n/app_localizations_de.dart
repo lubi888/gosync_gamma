@@ -9,7 +9,7 @@ class AppLocalizationsDe extends AppLocalizations {
   AppLocalizationsDe([String locale = 'de']) : super(locale);
 
   @override
-  String get titledate => 'goSync250602';
+  String get titledate => 'goSync250623';
 
   @override
   String get title => 'goSync de 240418 250528';

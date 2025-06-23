@@ -210,53 +210,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
           ExpansionTile(
             initiallyExpanded: true,
             title: const Text(
-              "tiobe index",
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.blueAccent),
-            ),
-            leading: const Icon(
-              // FontAwesomeIcons.google,
-              Icons.code_outlined,
-              color: Colors.deepPurpleAccent,
-            ), //add icon
-            childrenPadding: const EdgeInsets.only(left: 30), //children padding
-            children: [
-              ListTile(
-                leading: const Icon(
-                  // Icons.tv,
-                  FontAwesomeIcons.google,
-                  color: Colors.blue,
-                ),
-                title: const Text(
-                  // 'add eth|etc address - acccount',
-                  'tiobe index of top programming lanugages',
-                  // AppLocalizations.of(context)!.visitGoDevPlay,
-                  style: TextStyle(color: Colors.teal),
-                ),
-                subtitle: const Text(
-                  // 'https://play.golang.com/',
-                  'go currently number 7',
-                  // https://go.dev/play/
-                  style: TextStyle(
-                    fontStyle: FontStyle.italic,
-                    color: Colors.pink,
-                  ),
-                ),
-                trailing: const Icon(
-                  FontAwesomeIcons.golang,
-                  color: Colors.green,
-                ),
-                onTap: () {
-                  // Navigator.of(context).pop();
-                  // _launchYouTube();
-                  _launchGoTiobe();
-                },
-              ),
-            ],
-          ),
-          ExpansionTile(
-            initiallyExpanded: true,
-            title: const Text(
               "go installation levels",
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.yellow),
@@ -1011,6 +964,115 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 onTap: () {
                   // Navigator.of(context).pop();
                   _launchGoBlog();
+                },
+              ),
+            ],
+          ),
+          ExpansionTile(
+            initiallyExpanded: true,
+            title: const Text(
+              "golang global use index",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.blueAccent),
+            ),
+            leading: const Icon(
+              // FontAwesomeIcons.google,
+              Icons.code_outlined,
+              color: Colors.blueAccent,
+            ), //add icon
+            childrenPadding: const EdgeInsets.only(left: 30), //children padding
+            children: [
+              ListTile(
+                leading: const Icon(
+                  // Icons.tv,
+                  FontAwesomeIcons.chartSimple,
+                  color: Colors.blue,
+                ),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'tiobe global index of top programming languages',
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.teal),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'golang currently number 7',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.lightBlueAccent,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.golang,
+                  color: Colors.green,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  // _launchYouTube();
+                  _launchGoTiobe();
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  // Icons.tv,
+                  FontAwesomeIcons.chartSimple,
+                  color: Colors.blue,
+                ),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'tiobe global index of top programming languages',
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.teal),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'golang currently number 7',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.lightBlueAccent,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.golang,
+                  color: Colors.green,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  // _launchYouTube();
+                  _launchGoTiobe();
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  // Icons.tv,
+                  FontAwesomeIcons.chartSimple,
+                  color: Colors.greenAccent,
+                ),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'geeks for geeks global index of top programming languages 2025',
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.lightGreenAccent),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'golang currently number 8 in hte top 10',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.greenAccent,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.golang,
+                  color: Colors.green,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  // _launchYouTube();
+                  _launchGoGeeksForGeeks();
                 },
               ),
             ],
@@ -3057,6 +3119,17 @@ Future<void> _launchGoTiobe() async {
   print(TimeOfDay.now());
   if (!await launchUrl(_urlGoTiobe)) {
     throw Exception('Could not launch $_urlGoTiobe');
+  }
+}
+
+// _launchGoTiobe
+final Uri _urlGoGeeksForGeeks = Uri.parse('https://www.geeksforgeeks.org/blogs/top-programming-languages-of-the-future-2025/#top-10-programming-languages-for-2025');
+
+Future<void> _launchGoGeeksForGeeks() async {
+  debugPrint("customer left app to geeks for geeks");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoGeeksForGeeks)) {
+    throw Exception('Could not launch $_urlGoGeeksForGeeks');
   }
 }
 
