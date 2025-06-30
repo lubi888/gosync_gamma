@@ -1017,21 +1017,21 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 leading: const Icon(
                   // Icons.tv,
                   FontAwesomeIcons.chartSimple,
-                  color: Colors.blue,
+                  color: Colors.greenAccent,
                 ),
                 title: const Text(
                   // 'add eth|etc address - acccount',
-                  'tiobe global index of top programming languages',
+                  'index.dev global index of top programming languages',
                   // AppLocalizations.of(context)!.visitGoDevPlay,
                   style: TextStyle(color: Colors.teal),
                 ),
                 subtitle: const Text(
                   // 'https://play.golang.com/',
-                  'golang currently number 7',
+                  'golang currently number 8 out of 20 for 2025',
                   // https://go.dev/play/
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
-                    color: Colors.lightBlueAccent,
+                    color: Colors.orangeAccent,
                   ),
                 ),
                 trailing: const Icon(
@@ -1041,7 +1041,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 onTap: () {
                   // Navigator.of(context).pop();
                   // _launchYouTube();
-                  _launchGoTiobe();
+                  _launchGoIndexDev();
                 },
               ),
               ListTile(
@@ -1058,7 +1058,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 ),
                 subtitle: const Text(
                   // 'https://play.golang.com/',
-                  'golang currently number 8 in hte top 10',
+                  'golang currently number 6 in hte top 10 for 2025',
                   // https://go.dev/play/
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
@@ -1073,6 +1073,37 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   // Navigator.of(context).pop();
                   // _launchYouTube();
                   _launchGoGeeksForGeeks();
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  // Icons.tv,
+                  FontAwesomeIcons.chartSimple,
+                  color: Colors.greenAccent,
+                ),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'pluralsight index of top programming languages 2025',
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.lightGreenAccent),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'golang currently number 9 in hte top 10 for 2025',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.redAccent,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.golang,
+                  color: Colors.yellowAccent,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  // _launchYouTube();
+                  _launchGoPluralsight();
                 },
               ),
             ],
@@ -1133,6 +1164,27 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 ),
                 onTap: () {
                   _launchAmazonGolang();
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.book, color: Colors.red),
+                title: const Text(
+                  'visit Google Play Books golang books',
+                  style: TextStyle(color: Colors.blueAccent),
+                ),
+                subtitle: const Text(
+                  'google play digital books',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.yellowAccent,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.googlePlay,
+                  color: Colors.redAccent,
+                ),
+                onTap: () {
+                  _launchGooglePlayBooksGolang();
                 },
               ),
             ],
@@ -2477,13 +2529,28 @@ Future<void> _launchGopherGuides() async {
 }
 
 // _launchAmazonGolang();
-final Uri _urlAmazonGolang = Uri.parse('https://www.amazon.com/s?k=golang');
+final Uri _urlAmazonGolang = Uri.parse(
+  'https://www.amazon.com/golang/s?k=golang',
+);
 
 Future<void> _launchAmazonGolang() async {
   debugPrint("customer left app to gopher guides  at");
   print(TimeOfDay.now());
   if (!await launchUrl(_urlAmazonGolang)) {
     throw Exception('Could not launch $_urlAmazonGolang');
+  }
+}
+
+// _launchGooglePlayBooksGolang();
+final Uri _urlGooglePlayBooksGolang = Uri.parse(
+  'https://play.google.com/store/search?q=golang&c=books',
+);
+
+Future<void> _launchGooglePlayBooksGolang() async {
+  debugPrint("customer left app to gopher guides  at");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGooglePlayBooksGolang)) {
+    throw Exception('Could not launch $_urlGooglePlayBooksGolang');
   }
 }
 
@@ -3112,7 +3179,7 @@ Future<void> _launchGoogleCloudGo() async {
 }
 
 // _launchGoTiobe
-final Uri _urlGoTiobe = Uri.parse('https://www.tiobe.com/tiobe-index/go/');
+final Uri _urlGoTiobe = Uri.parse('https://www.tiobe.com/tiobe-index/');
 
 Future<void> _launchGoTiobe() async {
   debugPrint("customer left app to Hostinger");
@@ -3123,13 +3190,41 @@ Future<void> _launchGoTiobe() async {
 }
 
 // _launchGoTiobe
-final Uri _urlGoGeeksForGeeks = Uri.parse('https://www.geeksforgeeks.org/blogs/top-programming-languages-of-the-future-2025/#top-10-programming-languages-for-2025');
+final Uri _urlGoGeeksForGeeks = Uri.parse(
+  'https://www.geeksforgeeks.org/blogs/top-programming-languages-of-the-future-2025/#top-10-programming-languages-for-2025',
+);
 
 Future<void> _launchGoGeeksForGeeks() async {
   debugPrint("customer left app to geeks for geeks");
   print(TimeOfDay.now());
   if (!await launchUrl(_urlGoGeeksForGeeks)) {
     throw Exception('Could not launch $_urlGoGeeksForGeeks');
+  }
+}
+
+// _launch index.dev
+final Uri _urlGoIndexDev = Uri.parse(
+  'https://www.index.dev/blog/most-popular-programming-languages-',
+);
+
+Future<void> _launchGoIndexDev() async {
+  debugPrint("customer left app to index.dev");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoIndexDev)) {
+    throw Exception('Could not launch $_urlGoIndexDev');
+  }
+}
+
+// _launch pluralsight
+final Uri _urlGoPluralsight = Uri.parse(
+  'https://www.pluralsight.com/resources/blog/upskilling/top-programming-languages-2025',
+);
+
+Future<void> _launchGoPluralsight() async {
+  debugPrint("customer left app to plurlasight");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoPluralsight)) {
+    throw Exception('Could not launch $_urlGoPluralsight');
   }
 }
 
