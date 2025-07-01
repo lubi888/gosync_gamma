@@ -1111,7 +1111,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
           ExpansionTile(
             initiallyExpanded: true,
             title: const Text(
-              "written guides & books",
+              "written guides, books, schwag",
               textAlign: TextAlign.center,
               style: TextStyle(color: Colors.purple),
             ),
@@ -1146,7 +1146,31 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.book, color: Colors.red),
+                leading: const Icon(
+                  Icons.account_balance,
+                  color: Colors.yellowAccent,
+                ),
+                title: const Text(
+                  'visit Medium with tags golang and go',
+                  style: TextStyle(color: Colors.blueAccent),
+                ),
+                subtitle: const Text(
+                  'medium golang tutorials, tips, tricks, opinions',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.purpleAccent,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.medium,
+                  color: Colors.lightGreenAccent,
+                ),
+                onTap: () {
+                  _launchMediumGolang();
+                },
+              ),
+              ListTile(
+                leading: const Icon(FontAwesomeIcons.amazon, color: Colors.red),
                 title: const Text(
                   'visit Amazon golang books',
                   style: TextStyle(color: Colors.blueAccent),
@@ -1185,6 +1209,75 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 ),
                 onTap: () {
                   _launchGooglePlayBooksGolang();
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  FontAwesomeIcons.golang,
+                  color: Colors.yellowAccent,
+                ),
+                title: const Text(
+                  'visit eBay golang books',
+                  style: TextStyle(color: Colors.blueAccent),
+                ),
+                subtitle: const Text(
+                  'golang books but also many hardware items like gophers, t-shirts, caps',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.yellowAccent,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.ebay,
+                  color: Colors.greenAccent,
+                ),
+                onTap: () {
+                  _launchEbayGolang();
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  FontAwesomeIcons.golang,
+                  color: Colors.yellowAccent,
+                ),
+                title: const Text(
+                  'gopher market',
+                  style: TextStyle(color: Colors.blueAccent),
+                ),
+                subtitle: const Text(
+                  'golang merchandise',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.yellowAccent,
+                  ),
+                ),
+                trailing: const Icon(Icons.store, color: Colors.greenAccent),
+                onTap: () {
+                  _launchGolangmarket();
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  FontAwesomeIcons.google,
+                  color: Colors.blueAccent,
+                ),
+                title: const Text(
+                  'visit Google general merchandise store',
+                  style: TextStyle(color: Colors.blueAccent),
+                ),
+                subtitle: const Text(
+                  'no golang merch but lots of other official items',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.redAccent,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.googlePay,
+                  color: Colors.yellowAccent,
+                ),
+                onTap: () {
+                  _launchGoogleMerch();
                 },
               ),
             ],
@@ -2528,10 +2621,20 @@ Future<void> _launchGopherGuides() async {
   }
 }
 
+// medium read tag golnag
+// https://medium.com/tag/golang
+final Uri _urlMediumGolang = Uri.parse('https://medium.com/tag/golang');
+
+Future<void> _launchMediumGolang() async {
+  debugPrint("customer left app to medium tag golang at");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlMediumGolang)) {
+    throw Exception('Could not launch $_urlMediumGolang');
+  }
+}
+
 // _launchAmazonGolang();
-final Uri _urlAmazonGolang = Uri.parse(
-  'https://www.amazon.com/golang/s?k=golang',
-);
+final Uri _urlAmazonGolang = Uri.parse('https://www.amazon.com/s?k=golang');
 
 Future<void> _launchAmazonGolang() async {
   debugPrint("customer left app to gopher guides  at");
@@ -2551,6 +2654,42 @@ Future<void> _launchGooglePlayBooksGolang() async {
   print(TimeOfDay.now());
   if (!await launchUrl(_urlGooglePlayBooksGolang)) {
     throw Exception('Could not launch $_urlGooglePlayBooksGolang');
+  }
+}
+
+// _launchEbayGolang();
+final Uri _urlEbayGolang = Uri.parse(
+  'https://www.ebay.com/sch/i.html?_nkw=golang',
+);
+
+Future<void> _launchEbayGolang() async {
+  debugPrint("customer left app to ebay at");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlEbayGolang)) {
+    throw Exception('Could not launch $_urlEbayGolang');
+  }
+}
+
+// https://gopher.golangmarket.com/
+// _launchEbayGolang();
+final Uri _urlGolangmarket = Uri.parse('https://gopher.golangmarket.com/');
+
+Future<void> _launchGolangmarket() async {
+  debugPrint("customer left app to ebay at");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGolangmarket)) {
+    throw Exception('Could not launch $_urlGolangmarket');
+  }
+}
+
+// google merch store
+final Uri _urlGoogleMerch = Uri.parse('https://shop.merch.google/');
+
+Future<void> _launchGoogleMerch() async {
+  debugPrint("customer left app to ebay at");
+  print(TimeOfDay.now());
+  if (!await launchUrl(_urlGoogleMerch)) {
+    throw Exception('Could not launch $_urlGoogleMerch');
   }
 }
 
@@ -2806,7 +2945,7 @@ Future<void> _launchWikpediaGo() async {
 final Uri _urlMediumTagGo = Uri.parse('https://medium.com/tag/golang');
 
 Future<void> _launchMediumTagGo() async {
-  debugPrint("customer left app to github go issues");
+  debugPrint("customer left app to medium go issues");
   print(TimeOfDay.now());
   if (!await launchUrl(_urlMediumTagGo)) {
     throw Exception('Could not launch $_urlMediumTagGo');
