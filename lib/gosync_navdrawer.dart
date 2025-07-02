@@ -1131,7 +1131,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   style: TextStyle(color: Colors.blueAccent),
                 ),
                 subtitle: const Text(
-                  'gopher guide tutorials',
+                  'professional approoved gopher guide tutorials and articles about new packages',
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
                     color: Colors.orangeAccent,
@@ -1143,6 +1143,76 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 ),
                 onTap: () {
                   _launchGopherGuides();
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  FontAwesomeIcons.wikipediaW,
+                  color: Colors.blueGrey,
+                  // Icons.alternate_email_rounded,
+                  // Icons.flutter_dash,
+                  // color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'visit Wikpedia surface web and deep link',
+                  // visitGoPlayground,
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.blue),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'deep link to Wikimedia',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.red,
+                  ),
+                ),
+                trailing: const Icon(
+                  FontAwesomeIcons.wikipediaW,
+                  color: Colors.grey,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchWikpediaGo();
+                  //   launch deep linking youtube.
+                },
+              ),
+              // paddings seperator
+              ListTile(
+                leading: const Icon(
+                  FontAwesomeIcons.medium,
+                  color: Colors.yellow,
+                  // Icons.alternate_email_rounded,
+                  // Icons.flutter_dash,
+                  // color: Colors.lightBlue,
+                ),
+                title: const Text(
+                  // 'add eth|etc address - acccount',
+                  'visit Medium tag Golang',
+                  // visitGoPlayground,
+                  // AppLocalizations.of(context)!.visitGoDevPlay,
+                  style: TextStyle(color: Colors.blue),
+                ),
+                subtitle: const Text(
+                  // 'https://play.golang.com/',
+                  'deep link to Medium',
+                  // https://go.dev/play/
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    color: Colors.yellow,
+                  ),
+                ),
+                trailing: const Icon(
+                  // ignore: deprecated_member_use
+                  FontAwesomeIcons.mediumM,
+                  color: Colors.purple,
+                ),
+                onTap: () {
+                  // Navigator.of(context).pop();
+                  _launchMediumTagGo();
+                  //   launch deep linking youtube.
                 },
               ),
               ListTile(
@@ -1241,11 +1311,11 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   color: Colors.yellowAccent,
                 ),
                 title: const Text(
-                  'gopher market',
+                  'visit Gopher market',
                   style: TextStyle(color: Colors.blueAccent),
                 ),
                 subtitle: const Text(
-                  'golang merchandise',
+                  'indie golang merchandise',
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
                     color: Colors.yellowAccent,
@@ -1253,7 +1323,7 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                 ),
                 trailing: const Icon(Icons.store, color: Colors.greenAccent),
                 onTap: () {
-                  _launchGolangmarket();
+                  _launchGolangMarket();
                 },
               ),
               ListTile(
@@ -1563,7 +1633,6 @@ class _GoSyncNavDrawerState extends State<GoSyncNavDrawer> {
                   _launchYouTube();
                 },
               ),
-
               ListTile(
                 leading: const Icon(
                   FontAwesomeIcons.wikipediaW,
@@ -2672,13 +2741,13 @@ Future<void> _launchEbayGolang() async {
 
 // https://gopher.golangmarket.com/
 // _launchEbayGolang();
-final Uri _urlGolangmarket = Uri.parse('https://gopher.golangmarket.com/');
+final Uri _urlGolangMarket = Uri.parse('https://gopher.golangmarket.com/');
 
-Future<void> _launchGolangmarket() async {
+Future<void> _launchGolangMarket() async {
   debugPrint("customer left app to ebay at");
   print(TimeOfDay.now());
-  if (!await launchUrl(_urlGolangmarket)) {
-    throw Exception('Could not launch $_urlGolangmarket');
+  if (!await launchUrl(_urlGolangMarket)) {
+    throw Exception('Could not launch $_urlGolangMarket');
   }
 }
 
