@@ -66,7 +66,7 @@ class _GoSyncScrollbar0State extends State<GoSyncScrollbar0> {
           controller: scrollbarController,
           children: <Widget>[
             const Text(
-              'Home \nInstall Golang Page 0 \n2025.07.09',
+              'Home \nInstall Golang Page 0 \n2025.09.30',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 50.0),
             ),
